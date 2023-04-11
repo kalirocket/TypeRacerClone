@@ -47,6 +47,9 @@ module.exports = {
         435: "435px",
         195: "195px",
         table_tr: "30px",
+        profilemini: "300px",
+        hr_h: "2px",
+        profile_height: "40px",
       },
       backgroundImage: {
         banner_image: "url(./assets/banner.jpg)",
@@ -91,6 +94,8 @@ module.exports = {
         button3: "140px",
         70: "70px",
         50: "50px",
+        sidebar: '300px',
+        profile_width: "40px",
       },
       fontWeight: {
         inner_text: "500",
