@@ -45,6 +45,7 @@ module.exports = {
         banner: "700px",
         435: "435px",
         195: "195px",
+        110: "110px",
         table_tr: "30px",
         profilemini: "300px",
         hr_h: "2px",
@@ -81,11 +82,11 @@ module.exports = {
         size_2: "0.728rem",
         size_3: "0.91rem",
         size_4: "1.183rem",
-        size_5: "1.1",
+        size_5: "1.1rem",
         size_6: "0.8rem",
         size_7: "0.9rem",
         size_8: "0.6rem",
-        change_f_size: '150%',
+        change_f_size: "150%",
       },
       width: {
         header: "94%",
@@ -93,9 +94,12 @@ module.exports = {
         button2: "140px",
         button3: "140px",
         70: "70px",
+        110: "110px",
+
         50: "50px",
         sidebar: "300px",
         profile_width: "40px",
+        pitinfo: "calc((100vw -32px) - 70px)",
       },
       fontWeight: {
         inner_text: "500",
@@ -106,6 +110,9 @@ module.exports = {
       backgroundSize: {
         "50%": "50%",
         "40%": "30%",
+      },
+      borderWidth: {
+        1: "1px",
       },
     },
   },
