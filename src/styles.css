@@ -23,4 +23,9 @@
     hr {
         @apply opacity-10;
     }
+    button{
+        @apply transform-none;
+        @apply transition-none;
+        @apply animate-none;
+    }
 }

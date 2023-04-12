@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>Typeracer -Play Typing Games and Race Friends</title>
     <link rel="stylesheet" href="./styles.css" />
+    
   </head>
   <body class="bg-banner_image bg-no-repeat bg-left-top bg-border_color">
     <div class="container max-w-screen-max_screen mx-auto">
@@ -28,13 +29,13 @@
           </div>
           <!--header and logo-->
           <div class="mr-3">
-            <div>
+            <button onclick="show()">
               <img
                 src="./assets/hamburger_logo.jpg"
                 alt="hamburger_logo"
                 width="20px"
               />
-            </div>
+            </button>
           </div>
           <!--sidebar-->
         </div>
@@ -950,8 +951,8 @@
       </div> <!--Theme Change-->
         <div class="-mt-2"><img src="./assets/addicting_games.png" alt="" width="100px"></div> <!--Addicting games link-->
       </div> <!--Footer-->
-      <div class="bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black flex flex-col justify-start px-8 gap-y-6">
-        <div class="mt-4 -mr-3 flex justify-end items-center"><img src="./assets/close.png" alt="" width="20px"></div> <!--Close Button-->
+      <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle_hide_show">
+        <button class="mt-4 -mr-3 flex justify-end items-center"><img src="./assets/close.png" alt="" width="20px" onclick="hide()"></button> <!--Close Button-->
         <div class="flex flex-col gap-1">
           <div class="text-custom_white">Pit Stop</div>
         <hr>
@@ -989,5 +990,6 @@
         </div> <!--Mini profile-->
       </div> <!--Sidebar-->
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
