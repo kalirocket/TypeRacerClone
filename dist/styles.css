@@ -450,12 +450,6 @@ hr{
   opacity: 0.1;
 }
 
-button{
-  transform: none;
-  transition-property: none;
-  animation: none;
-}
-
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -623,12 +617,6 @@ button{
 @media (min-width: 640px){
   .container{
     max-width: 640px;
-  }
-}
-
-@media (min-width: 646px){
-  .container{
-    max-width: 646px;
   }
 }
 
@@ -833,7 +821,7 @@ button{
 }
 
 .max-w-screen-max_screen{
-  max-width: 646px;
+  max-width: 768px;
 }
 
 .border-collapse{
@@ -858,6 +846,10 @@ button{
 
 .flex-wrap{
   flex-wrap: wrap;
+}
+
+.items-end{
+  align-items: flex-end;
 }
 
 .items-center{
@@ -1224,6 +1216,10 @@ button{
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-change_f_size{
+  font-size: 150%;
 }
 
 .text-size_1{

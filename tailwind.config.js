@@ -18,7 +18,7 @@ module.exports = {
         school_bg: "#fafafa",
       },
       screens: {
-        max_screen: "646px",
+        max_screen: "768px",
         min_screen: "320px",
         breakpoint: "542px",
         //Footer breakpoints
@@ -32,7 +32,6 @@ module.exports = {
         footer_8: "627px",
         //Change Theme button
         theme: "384px",
-
       },
       spacing: {
         height_1: "3.7rem",
@@ -86,6 +85,7 @@ module.exports = {
         size_6: "0.8rem",
         size_7: "0.9rem",
         size_8: "0.6rem",
+        change_f_size: '150%',
       },
       width: {
         header: "94%",
@@ -94,7 +94,7 @@ module.exports = {
         button3: "140px",
         70: "70px",
         50: "50px",
-        sidebar: '300px',
+        sidebar: "300px",
         profile_width: "40px",
       },
       fontWeight: {
