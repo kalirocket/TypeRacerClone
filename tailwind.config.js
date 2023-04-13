@@ -21,6 +21,12 @@ module.exports = {
         max_screen: "768px",
         min_screen: "320px",
         breakpoint: "542px",
+
+        // Pit stop breakpoints
+        items3: "480px",
+        items4: "600px",
+        items5: "750px",
+
         //Footer breakpoints
         footer_1: "252px",
         footer_2: "288px",
@@ -50,6 +56,8 @@ module.exports = {
         profilemini: "300px",
         hr_h: "2px",
         profile_height: "40px",
+        85: '85px',
+        '2p5': "2.5em",
       },
       backgroundImage: {
         banner_image: "url(./assets/banner.jpg)",
@@ -95,11 +103,12 @@ module.exports = {
         button3: "140px",
         70: "70px",
         110: "110px",
-
+        85: '85px',
         50: "50px",
         sidebar: "300px",
         profile_width: "40px",
         pitinfo: "calc((100vw -32px) - 70px)",
+        '2p5': '2.5em',
       },
       fontWeight: {
         inner_text: "500",
