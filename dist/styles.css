@@ -632,6 +632,12 @@ hr{
   }
 }
 
+@media (min-width: 647px){
+  .container{
+    max-width: 647px;
+  }
+}
+
 @media (min-width: 750px){
   .container{
     max-width: 750px;
@@ -866,10 +872,6 @@ hr{
   width: 85px;
 }
 
-.w-auto{
-  width: auto;
-}
-
 .w-button1{
   width: 175px;
 }
@@ -900,10 +902,6 @@ hr{
 
 .w-sidebar{
   width: 300px;
-}
-
-.w-1{
-  width: 0.25rem;
 }
 
 .max-w-screen-max_screen{
@@ -1273,10 +1271,6 @@ hr{
   padding: 1rem;
 }
 
-.p-5{
-  padding: 1.25rem;
-}
-
 .p-6{
   padding: 1.5rem;
 }
@@ -1590,6 +1584,12 @@ hr{
 
   .items4\:items-center{
     align-items: center;
+  }
+}
+
+@media (min-width: 647px){
+  .\36 47\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

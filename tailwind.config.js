@@ -22,6 +22,9 @@ module.exports = {
         min_screen: "320px",
         breakpoint: "542px",
 
+        //Race modes break
+        '647': "647px",
+
         // Pit stop breakpoints
         items3: "480px",
         items4: "600px",
