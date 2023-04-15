@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         custom_blue_bg_1: "#005894",
         custom_white: "#FFF",
-        border_color: "#F2F2F2",
+        border_color: "#EEE",
         custom_green: "#4CAF50",
         custom_orange: "#FF7C1C",
         custom_blue_bg_2: "#003A61",
@@ -23,7 +23,7 @@ module.exports = {
         breakpoint: "542px",
 
         //Race modes break
-        '647': "647px",
+        647: "647px",
 
         // Pit stop breakpoints
         items3: "480px",
@@ -59,11 +59,14 @@ module.exports = {
         profilemini: "300px",
         hr_h: "2px",
         profile_height: "40px",
-        85: '85px',
-        '2p5': "2.5em",
+        85: "85px",
+        "2p5": "2.5em",
+        70: "70vh",
       },
       backgroundImage: {
         banner_image: "url(./assets/banner.jpg)",
+        background_all:
+          "linear-gradient(to bottom, rgba(143, 171, 198, 0.6) 60%, #EEE 90%) ,url(./assets/banner.svg)",
         redcar: "url(./assets/redcar.svg)",
         oldredcar: "url(./assets/oldredcar.svg)",
         redbluecar: "url(./assets/redblue_car.svg)",
@@ -106,12 +109,12 @@ module.exports = {
         button3: "140px",
         70: "70px",
         110: "110px",
-        85: '85px',
+        85: "85px",
         50: "50px",
         sidebar: "300px",
         profile_width: "40px",
         pitinfo: "calc((100vw -32px) - 70px)",
-        '2p5': '2.5em',
+        "2p5": "2.5em",
       },
       fontWeight: {
         inner_text: "500",

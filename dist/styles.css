@@ -816,6 +816,10 @@ hr{
   height: 435px;
 }
 
+.h-70{
+  height: 70vh;
+}
+
 .h-85{
   height: 85px;
 }
@@ -1058,6 +1062,10 @@ hr{
   border-style: solid;
 }
 
+.border-none{
+  border-style: none;
+}
+
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -1075,7 +1083,7 @@ hr{
 
 .bg-border_color{
   --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
 }
 
 .bg-custom_blue_bg_1{
@@ -1219,8 +1227,8 @@ hr{
   background-image: url(./assets/all9.svg);
 }
 
-.bg-banner_image{
-  background-image: url(./assets/banner.jpg);
+.bg-background_all{
+  background-image: linear-gradient(to bottom, rgba(143, 171, 198, 0.6) 60%, #EEE 90%) ,url(./assets/banner.svg);
 }
 
 .bg-oldredcar{
@@ -1247,12 +1255,12 @@ hr{
   background-size: 50%;
 }
 
-.bg-bottom{
-  background-position: bottom;
+.bg-cover{
+  background-size: cover;
 }
 
-.bg-left-top{
-  background-position: left top;
+.bg-bottom{
+  background-position: bottom;
 }
 
 .bg-right-bottom{
@@ -1596,5 +1604,23 @@ hr{
 @media (min-width: 750px){
   .items5\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:mr-1{
+    margin-right: 0.25rem;
+  }
+
+  .lg\:mr-2{
+    margin-right: 0.5rem;
+  }
+
+  .lg\:mr-4{
+    margin-right: 1rem;
+  }
+
+  .lg\:flex{
+    display: flex;
   }
 }
