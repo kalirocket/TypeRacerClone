@@ -3,6 +3,9 @@ module.exports = {
   content: ["./dist/**/*.{html,js}"],
   theme: {
     extend: {
+      maxWidth: {
+        max: '910px'
+      },
       colors: {
         custom_blue_bg_1: "#005894",
         custom_white: "#FFF",
@@ -115,6 +118,7 @@ module.exports = {
         profile_width: "40px",
         pitinfo: "calc((100vw -32px) - 70px)",
         "2p5": "2.5em",
+        49: '49%',
       },
       fontWeight: {
         inner_text: "500",
@@ -129,6 +133,10 @@ module.exports = {
       borderWidth: {
         1: "1px",
       },
+      padding: {
+        100: '100px',
+      }
+
     },
   },
   plugins: [],

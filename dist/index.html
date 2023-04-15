@@ -10,9 +10,9 @@
     
   </head>
   <body class="bg-border_color">
-    <div class="h-70 w-full bg-background_all bg-no-repeat bg-cover border-none"><div class="bg-custom_blue_bg_1 flex justify-center h-height_1">
+    <div class="h-70 w-full bg-background_all bg-no-repeat bg-cover lg:text-110"><div class="bg-custom_blue_bg_1 flex justify-center h-height_1 lg:px-100">
         <div class="flex flex-row justify-between items-center w-header">
-          <div class="flex flex-row items-center">
+          <div class="flex flex-row items-center lg:gap-x-8">
             <div>
               <img
                 src="./assets/keyboard_static.jpg"
@@ -21,14 +21,28 @@
               />
             </div>
             <div
-              class="text-size_1 font-bold text-custom_white ml-2 opacity-95"
+              class="text-size_1 font-bold text-custom_white lg:-ml-3 opacity-95"
             >
               <a href="./index.html">typeracer</a>
             </div>
+            <div class="absolute invisible lg:visible lg:static flex flex-row gap-x-8">
+              <div class="text-size_1 text-custom_white"><a href="./pitstop.html">Pit Stop</a></div>
+            <div class="text-size_1 text-custom_white"><a href="#">Updates</a></div>
+            <div class="text-size_1 text-custom_white"><a href="#">Discord</a></div>
+            <div class="text-size_1 text-custom_white"><a href="#">About</a></div>
+            <div class="text-custom_white"><a href="#">Merch</a></div>
           </div>
-          <!--header and logo-->
+          </div>
+          
+          <!--header and logo and other items-->
           <div class="mr-3">
-            <button onclick="show()">
+            <div class="invisible absolute lg:visible lg:static flex flex-row">
+              <div class="mt-6 rounded-md bg-cyan-500 flex items-center"><img src="./assets/helmet_small.svg" alt="" width="50px"></div>
+              <div class="">
+                <div class="text-size_1 text-custom_white lg:visible">Guest</div>
+              </div>
+            </div>
+            <button class="visible lg:invisible" onclick="show()">
               <img
                 src="./assets/hamburger_logo.jpg"
                 alt="hamburger_logo"
@@ -40,7 +54,7 @@
         </div>
       </div>
       <!--Header with sidebar-->
-    <div class="container max-w-screen-max_screen mx-auto">
+    <div class="container max-w-max mx-auto">
       
       <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95">
         <div>Get a TypeRacer Mug for your desk</div>
@@ -79,7 +93,7 @@
             <div
               class="bg-whiteglass backdrop-filter backdrop-blur-sm rounded-lg space-y-4"
             >
-              <div class="lg:flex flex-row">
+              <div class="lg:flex flex-row justify-between"><div class="lg:flex flex-row">
                 <div
                   class="text-custom_blue_text font-extralight flex flex-col breakpoint:flex-row lg:mr-4"
                 >
@@ -113,15 +127,15 @@
                 <img src="./assets/youtube.svg" alt="youtube" width="25px" />
                 <img src="./assets/twitter.svg" alt="twitter" width="25px" />
               </div>
-              <!--Social links-->
+              <!--Social links--></div> <!--socials and ... wrapper for breakpoint responsive-->
             </div>
             <!--Language... and socials-->
           </div>
           <!--Items-->
         </div>
         <!--Typeracer-The Global....-->
-        <div
-          class="bg-oldredcar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4"
+        <div class="flex flex-col gap-4 lg:flex lg:flex-row lg:justify-between"><div
+          class="bg-oldredcar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4 lg:w-49 "
         >
           <div>
             <div class="text-custom_blue_text text-size_5 font-bold">
@@ -139,7 +153,7 @@
           </div>
         </div>
         <!--Typing test....-->
-        <div class="bg-white rounded-md">
+        <div class="bg-white rounded-md lg:w-49">
           <div
             class="bg-redbluecar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4"
           >
@@ -160,7 +174,7 @@
           </div>
           <!--Race your friends-->
         </div>
-        <!--Race your friends-->
+        <!--Race your friends--></div> <!--Race your friends and typing test wrapper-->
         <div class="text-custom_white bg-custom_blue_bg_1 mx-1 p-6 rounded-lg">
           <div class="font-bold text-size_4">Record your races with a TypeRacer Account!</div>
           <div class="text-size_3 mt-2">Save your race history and scores. Customers your profile and car. It's free, why not?</div>
