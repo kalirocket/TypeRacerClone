@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        max: '910px'
+        max: "910px",
       },
       colors: {
         custom_blue_bg_1: "#005894",
@@ -19,6 +19,7 @@ module.exports = {
         table_border: "#c7dfef",
         table_no: "#e4f3ff",
         school_bg: "#fafafa",
+        side_create: "#ffd71f",
       },
       screens: {
         max_screen: "768px",
@@ -118,7 +119,7 @@ module.exports = {
         profile_width: "40px",
         pitinfo: "calc((100vw -32px) - 70px)",
         "2p5": "2.5em",
-        49: '49%',
+        49: "49%",
       },
       fontWeight: {
         inner_text: "500",
@@ -134,9 +135,8 @@ module.exports = {
         1: "1px",
       },
       padding: {
-        100: '100px',
-      }
-
+        100: "100px",
+      },
     },
   },
   plugins: [],
