@@ -776,20 +776,12 @@ hr{
   margin-top: 0.5rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .mt-4{
   margin-top: 1rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mt-8{
-  margin-top: 2rem;
 }
 
 .flex{
@@ -1632,8 +1624,8 @@ hr{
 }
 
 @media (min-width: 647px){
-  .\36 47\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .\36 47\:grid-flow-row{
+    grid-auto-flow: row;
   }
 }
 

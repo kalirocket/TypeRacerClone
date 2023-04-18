@@ -57,6 +57,7 @@ module.exports = {
         change_theme_button2: "50px",
         banner: "700px",
         435: "435px",
+        test: "225px",
         195: "195px",
         110: "110px",
         table_tr: "30px",
@@ -120,6 +121,7 @@ module.exports = {
         pitinfo: "calc((100vw -32px) - 70px)",
         "2p5": "2.5em",
         49: "49%",
+        25: "400%",
       },
       fontWeight: {
         inner_text: "500",
