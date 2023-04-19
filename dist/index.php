@@ -23,10 +23,10 @@
             <div
               class="text-size_1 font-bold text-custom_white lg:-ml-3 opacity-95"
             >
-              <a href="./index.html">typeracer</a>
+              <a href="./index.php">typeracer</a>
             </div>
             <div class="absolute invisible lg:visible lg:static flex flex-row gap-x-8">
-              <div class="text-size_1 text-custom_white"><a href="./pitstop.html">Pit Stop</a></div>
+              <div class="text-size_1 text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
             <div class="text-size_1 text-custom_white"><a href="#">Updates</a></div>
             <div class="text-size_1 text-custom_white"><a href="#">Discord</a></div>
             <div class="text-size_1 text-custom_white"><a href="#">About</a></div>
@@ -979,7 +979,7 @@
       <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle_hide_show">
         <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hide()"></button> <!--Close Button-->
         <div class="flex flex-col gap-1">
-          <div class="text-custom_white"><a href="./pitstop.html">Pit Stop</a></div>
+          <div class="text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
         <hr>
         <div class="text-custom_white">Updates</div>
         <hr>

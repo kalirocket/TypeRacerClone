@@ -21,7 +21,7 @@
           </div>
           <div class="ml-2 opacity-95 mt-4">
             <div class="text-size_1 font-bold text-custom_white">
-              <a href="./index.html">typeracer</a>
+              <a href="./index.php">typeracer</a>
             </div>
             <div class="text-right text-size_8 text-custom_white">Pit Stop</div>
           </div>
@@ -228,7 +228,7 @@
       </button>
       <!--Close Button-->
       <div class="flex flex-col gap-1">
-        <div class="text-custom_white"><a href="./index.html">Race</a></div>
+        <div class="text-custom_white"><a href="./index.php">Race</a></div>
         <hr />
         <div class="text-custom_white">Updates</div>
         <hr />
@@ -240,7 +240,7 @@
       </div>
       <!--Links Wrapper-->
       <div class="flex flex-col gap-1">
-        <div class="text-custom_white"><a href="./pitstop.html">Home</a></div>
+        <div class="text-custom_white"><a href="./pitstop.php">Home</a></div>
         <hr />
         <div class="text-custom_white">Profile</div>
         <hr />
