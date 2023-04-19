@@ -122,6 +122,7 @@ module.exports = {
         "2p5": "2.5em",
         49: "49%",
         25: "400%",
+        32.4: "32.4%",
       },
       fontWeight: {
         inner_text: "500",

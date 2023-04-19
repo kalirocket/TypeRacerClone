@@ -924,6 +924,10 @@ hr{
   max-width: 768px;
 }
 
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+
 .border-collapse{
   border-collapse: collapse;
 }
@@ -1624,8 +1628,24 @@ hr{
 }
 
 @media (min-width: 647px){
-  .\36 47\:grid-flow-row{
-    grid-auto-flow: row;
+  .\36 47\:flex{
+    display: flex;
+  }
+
+  .\36 47\:h-test{
+    height: 225px;
+  }
+
+  .\36 47\:h-auto{
+    height: auto;
+  }
+
+  .\36 47\:w-32{
+    width: 8rem;
+  }
+
+  .\36 47\:w-32\.4{
+    width: 32.4%;
   }
 }
 
