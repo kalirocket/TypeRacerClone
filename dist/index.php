@@ -62,7 +62,24 @@
       </div>
       <!--Header with sidebar-->
     <div class="container max-w-max mx-auto">
-      <div class="invisible absolute text-black bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam voluptatum aliquid sed sint nobis quod ex molestias, molestiae libero adipisci? Eveniet laboriosam fuga ab nam tempore alias incidunt non quod reprehenderit minima voluptatum aliquid officia, vel perspiciatis consequatur velit modi, eos, illum amet! Quod et voluptas assumenda cupiditate repudiandae dolor modi commodi facere asperiores impedit quidem at suscipit maiores nemo velit doloremque odit voluptatum quos, eaque quis distinctio. Blanditiis nobis eaque distinctio voluptate fuga adipisci amet consequuntur officiis nisi optio dolores, iste fugiat accusantium est culpa ipsum tempora molestias, sapiente provident error corporis earum eum voluptatum! Modi natus soluta adipisci? Esse magni adipisci dolores, corrupti quod sint veniam architecto voluptates unde in eos ipsum doloremque maiores enim incidunt laudantium. Voluptates, sed repudiandae fugiat cupiditate voluptatibus ipsa tempora, dignissimos aliquam laudantium corporis maxime? Animi illo qui minus quaerat earum consectetur fugit voluptate labore amet vitae minima beatae sunt sed ex veniam ratione vero, nam quo repudiandae! Maxime eum sed et possimus fugiat amet omnis accusantium rerum eos. Architecto, fugit quibusdam. Quasi aut asperiores cum, nostrum ad deserunt vitae. Molestias quas temporibus neque in rem dolorum incidunt. Dolore illo, minima ullam, nobis eum quia sequi delectus esse possimus nostrum laboriosam similique!</div> <!--GameGround after clicking enter a typing race button-->
+      <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
+        <div class="flex flex-row justify-between">
+          <div class="text-custom_blue_text font-bold">The race is about to start!</div> <!--Race is about to start-->
+          <div >0:0</div>
+        </div> <!--Race is about to start, go, timer to end race-->
+        <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
+          <div class="border-b-2 border-dashed border-side_create w-90">
+            <div class="w-50 flex flex-row gap-x-1 ml-14 relative">
+              <div class="font-semibold">
+                <div>Guest</div>
+                <div class="flex justify-end -mt-2">(you)</div>
+              </div> <!--Text-->
+              <img src="./assets/basic-orange.svg" alt="" width=""> <!--Car-->
+          </div> <!--car and name-->
+          </div> <!--Race track and car-->
+          <div>0 wpm</div> <!--WPM-->
+        </div> <!--user-->
+      </div> <!--GameGround after clicking enter a typing race button-->
       
       <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game">
         <div>Get a TypeRacer Mug for your desk</div>

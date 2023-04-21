@@ -20,6 +20,7 @@ module.exports = {
         table_no: "#e4f3ff",
         school_bg: "#fafafa",
         side_create: "#ffd71f",
+        game_text: "#638e8e",
       },
       screens: {
         max_screen: "768px",
@@ -123,6 +124,7 @@ module.exports = {
         49: "49%",
         25: "400%",
         32.4: "32.4%",
+        90: "90%",
       },
       fontWeight: {
         inner_text: "500",

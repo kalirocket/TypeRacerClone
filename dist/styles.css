@@ -732,17 +732,16 @@ hr{
   margin-bottom: 1rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .-mr-3{
   margin-right: -0.75rem;
 }
 
 .-mt-2{
   margin-top: -0.5rem;
+}
+
+.-mt-8{
+  margin-top: -2rem;
 }
 
 .mb-10{
@@ -789,12 +788,20 @@ hr{
   margin-top: 1.5rem;
 }
 
-.-mt-4{
-  margin-top: -1rem;
+.mt-8{
+  margin-top: 2rem;
 }
 
-.-mt-8{
-  margin-top: -2rem;
+.ml-20{
+  margin-left: 5rem;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-14{
+  margin-left: 3.5rem;
 }
 
 .flex{
@@ -891,6 +898,10 @@ hr{
 
 .w-85{
   width: 85px;
+}
+
+.w-90{
+  width: 90%;
 }
 
 .w-button1{
@@ -1088,8 +1099,16 @@ hr{
   border-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
 .border-solid{
   border-style: solid;
+}
+
+.border-dashed{
+  border-style: dashed;
 }
 
 .border-black{
@@ -1100,6 +1119,11 @@ hr{
 .border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.border-side_create{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 215 31 / var(--tw-border-opacity));
 }
 
 .bg-blue-400{
@@ -1378,6 +1402,11 @@ hr{
   padding-bottom: 1.25rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pl-4{
   padding-left: 1rem;
 }
@@ -1396,6 +1425,10 @@ hr{
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pl-20{
+  padding-left: 5rem;
 }
 
 .text-left{
@@ -1515,9 +1548,9 @@ hr{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-black{
+.text-game_text{
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(99 142 142 / var(--tw-text-opacity));
 }
 
 .underline{
