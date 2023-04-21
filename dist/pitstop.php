@@ -221,7 +221,7 @@
     <!--Footer-->
     <div
       class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black flex flex-col justify-start px-8 gap-y-6"
-      id="toggle_hide_show"
+      id="toggle-hide-show"
     >
       <button class="mt-4 -mr-3 flex justify-end items-end">
         <img src="./assets/close.png" alt="" width="20px" onclick="hide()" />

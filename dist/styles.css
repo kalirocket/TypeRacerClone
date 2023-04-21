@@ -732,6 +732,11 @@ hr{
   margin-bottom: 1rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .-mr-3{
   margin-right: -0.75rem;
 }
@@ -784,6 +789,14 @@ hr{
   margin-top: 1.5rem;
 }
 
+.-mt-4{
+  margin-top: -1rem;
+}
+
+.-mt-8{
+  margin-top: -2rem;
+}
+
 .flex{
   display: flex;
 }
@@ -794,10 +807,6 @@ hr{
 
 .grid{
   display: grid;
-}
-
-.hidden{
-  display: none;
 }
 
 .h-10{
@@ -1506,6 +1515,11 @@ hr{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -1630,10 +1644,6 @@ hr{
 @media (min-width: 647px){
   .\36 47\:flex{
     display: flex;
-  }
-
-  .\36 47\:h-test{
-    height: 225px;
   }
 
   .\36 47\:h-auto{

@@ -62,15 +62,16 @@
       </div>
       <!--Header with sidebar-->
     <div class="container max-w-max mx-auto">
+      <div class="invisible absolute text-black bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam voluptatum aliquid sed sint nobis quod ex molestias, molestiae libero adipisci? Eveniet laboriosam fuga ab nam tempore alias incidunt non quod reprehenderit minima voluptatum aliquid officia, vel perspiciatis consequatur velit modi, eos, illum amet! Quod et voluptas assumenda cupiditate repudiandae dolor modi commodi facere asperiores impedit quidem at suscipit maiores nemo velit doloremque odit voluptatum quos, eaque quis distinctio. Blanditiis nobis eaque distinctio voluptate fuga adipisci amet consequuntur officiis nisi optio dolores, iste fugiat accusantium est culpa ipsum tempora molestias, sapiente provident error corporis earum eum voluptatum! Modi natus soluta adipisci? Esse magni adipisci dolores, corrupti quod sint veniam architecto voluptates unde in eos ipsum doloremque maiores enim incidunt laudantium. Voluptates, sed repudiandae fugiat cupiditate voluptatibus ipsa tempora, dignissimos aliquam laudantium corporis maxime? Animi illo qui minus quaerat earum consectetur fugit voluptate labore amet vitae minima beatae sunt sed ex veniam ratione vero, nam quo repudiandae! Maxime eum sed et possimus fugiat amet omnis accusantium rerum eos. Architecto, fugit quibusdam. Quasi aut asperiores cum, nostrum ad deserunt vitae. Molestias quas temporibus neque in rem dolorum incidunt. Dolore illo, minima ullam, nobis eum quia sequi delectus esse possimus nostrum laboriosam similique!</div> <!--GameGround after clicking enter a typing race button-->
       
-      <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95">
+      <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game">
         <div>Get a TypeRacer Mug for your desk</div>
     <div class="text-size_2">T-Shirts, Hoodies, Hats and more on the official merch store!</div>
     <div class="text-custom_orange text-size_3">Click Here!</div>
   </div> <!--Adverts-->
       <div class="grid grid-cols-1 gap-4 mt-4 px-1">
         <div
-          class="bg-redcar bg-no-repeat bg-right-bottom bg-50% bg-white rounded-lg p-custom_p1 shadow-custom_shadow"
+          class="bg-redcar bg-no-repeat bg-right-bottom bg-50% bg-white rounded-lg p-custom_p1 shadow-custom_shadow hide-for-game"
         >
           <div class="flex flex-col justify-center space-y-4">
             <div>
@@ -88,11 +89,11 @@
             <div>
               <div>
                 <div>
-                  <div
+                  <button onclick="hideForGame()"
                     class="bg-custom_green text-custom_white w-button1 h-10 rounded-md flex items-center justify-center opacity-90 text-size_3 font-bold"
                   >
                     Enter a Typing Race
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -141,7 +142,7 @@
           <!--Items-->
         </div>
         <!--Typeracer-The Global....-->
-        <div class="flex flex-col gap-4 lg:flex lg:flex-row lg:justify-between"><div
+        <div class="flex flex-col gap-4 lg:flex lg:flex-row lg:justify-between hide-for-game"><div
           class="bg-oldredcar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4 lg:w-49 "
         >
           <div>
@@ -160,7 +161,7 @@
           </div>
         </div>
         <!--Typing test....-->
-        <div class="bg-white rounded-md lg:w-49">
+        <div class="bg-white rounded-md lg:w-49" >
           <div
             class="bg-redbluecar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4"
           >
@@ -188,7 +189,7 @@
           <div class="mt-2 bg-orange-600 rounded-md p-4 w-button1 text-size_3 font-bold">Create Your Account</div>
         </div> <!--Create Account-->
         <div
-          class="bg-white rounded-md h-435 overflow-auto pt-4 px-4 gap-4 grid 647:h-auto 647:flex"
+          class="bg-white rounded-md h-435 overflow-auto pt-4 px-4 gap-4 grid 647:h-auto 647:flex static hide-for-game" 
         >
           <div
             class="bg-all bg-no-repeat rounded-lg h-195 bg-top bg-custom_blue_bg_1 flex flex-col justify-between 647:w-32.4 flex-shrink-0"
@@ -930,7 +931,7 @@
           </div> <!--Refresh Button and timer-->
         </div>
         <!--Latest high scores-->
-        <div class="bg-school_bg rounded-md bg-school bg-no-repeat bg-cover flex flex-col p-4 mx-2 gap-3 mb-10 h-full">
+        <div class="bg-school_bg rounded-md bg-school bg-no-repeat bg-cover flex flex-col p-4 mx-2 gap-3 mb-10 h-full hide-for-game">
           <div class="text-2xl text-custom_blue_text font-semibold">TypeRacer School Edition Features
         </div>
         <div class="text-sm font-semibold opacity-80">You get the same award-winning product as typeracer.com, with these additional benefits:</div>
@@ -967,7 +968,7 @@
           <div><img src="./assets/twitter_white.svg" alt="" width="25px"></div><!--Twitter-->
           
         </div> <!--Socials--></div> <!--Links and something wrapper-->
-        <div class="flex flex-col items-center gap-4 px-3 py-5"><div class="flex flex-row rounded-md bg-sky-500 h-change_theme_button justify-center items-center gap-8 theme:h-change_theme_button2 px-100 md:px-200 xl:px-100">
+        <div class="flex flex-col items-center gap-4 px-3 py-5"><div class="flex flex-row rounded-md bg-sky-500 h-change_theme_button justify-center items-center gap-8 theme:h-change_theme_button2 px-100 md:px-200 xl:px-100 -mt-8">
           <div class="flex flex-col text-size_1 items items-center justify-center font-bold text-custom_white pl-8 theme:flex-row gap-1 theme:pl-0">
             <div>Change</div>
             <div class="-mt-2 theme:-mt-0">Theme</div>
@@ -976,7 +977,7 @@
       </div> <!--Theme Change-->
         <div class="-mt-2"><img src="./assets/addicting_games.png" alt="" width="100px"></div> <!--Addicting games link--></div> <!--Change theme and additing games pic-->
       </div> <!--Footer-->
-      <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle_hide_show">
+      <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle-hide-show">
         <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hide()"></button> <!--Close Button-->
         <div class="flex flex-col gap-1">
           <div class="text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
