@@ -1689,10 +1689,6 @@ hr{
 }
 
 @media (min-width: 640px){
-  .sm\:visible{
-    visibility: visible;
-  }
-
   .sm\:w-75{
     width: 75px;
   }

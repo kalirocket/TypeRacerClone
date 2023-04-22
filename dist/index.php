@@ -81,9 +81,9 @@
         </div> <!--user-->
         <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2">
           <div id="quote-element-display" class="tracking-widest"></div> <!--quote-->
-          <div class="text-custom_blue_text flex justify-end text-sm md:base invisible">change display format</div> <!--Display format-->
+          <div class="text-custom_blue_text flex justify-end text-sm">change display format</div> <!--Display format-->
           <div class="w-full">
-            <textarea class="resize-none w-full h-8 border " name="" id="" cols="" rows=""></textarea>
+            <textarea class="resize-none w-full h-8 border tracking-widest"  name="" id="" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>
           </div> <!--Text Box-->
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>
