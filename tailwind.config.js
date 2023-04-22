@@ -125,6 +125,9 @@ module.exports = {
         25: "400%",
         32.4: "32.4%",
         90: "90%",
+        75: "75px",
+        testing: "230px",
+        
       },
       fontWeight: {
         inner_text: "500",

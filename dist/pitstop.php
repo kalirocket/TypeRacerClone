@@ -28,7 +28,7 @@
         </div>
         <!--header and logo-->
         <div class="mr-3">
-          <button onclick="show()">
+          <button onclick="showSideBar()">
             <img
               src="./assets/hamburger_logo.jpg"
               alt="hamburger_logo"
@@ -224,7 +224,7 @@
       id="toggle-hide-show"
     >
       <button class="mt-4 -mr-3 flex justify-end items-end">
-        <img src="./assets/close.png" alt="" width="20px" onclick="hide()" />
+        <img src="./assets/close.png" alt="" width="20px" onclick="hideSideBar()" />
       </button>
       <!--Close Button-->
       <div class="flex flex-col gap-1">

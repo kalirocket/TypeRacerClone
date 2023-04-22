@@ -49,7 +49,7 @@
               </div> <!--Username and other info-->
               
             </div>
-            <button class="static visible lg:invisible lg:absolute" onclick="show()">
+            <button class="static visible lg:invisible lg:absolute" onclick="showSideBar()">
               <img
                 src="./assets/hamburger_logo.jpg"
                 alt="hamburger_logo"
@@ -64,13 +64,13 @@
     <div class="container max-w-max mx-auto">
       <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
         <div class="flex flex-row justify-between">
-          <div class="text-custom_blue_text font-bold">The race is about to start!</div> <!--Race is about to start-->
+          <div class="text-custom_blue_text font-bold text-sm sm:text-lg">The race is about to start!</div> <!--Race is about to start-->
           <div >0:0</div>
         </div> <!--Race is about to start, go, timer to end race-->
         <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
           <div class="border-b-2 border-dashed border-side_create w-90">
-            <div class="w-50 flex flex-row gap-x-1 ml-14 relative">
-              <div class="font-semibold">
+            <div class="w-50 sm:w-75 flex flex-row gap-x-1 ml-14 relative">
+              <div class="font-semibold text-sm sm:text-base">
                 <div>Guest</div>
                 <div class="flex justify-end -mt-2">(you)</div>
               </div> <!--Text-->
@@ -79,6 +79,16 @@
           </div> <!--Race track and car-->
           <div>0 wpm</div> <!--WPM-->
         </div> <!--user-->
+        <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2">
+          <div id="quote-element-display" class="tracking-widest"></div> <!--quote-->
+          <div class="text-custom_blue_text flex justify-end text-sm md:base invisible">change display format</div> <!--Display format-->
+          <div class="w-full">
+            <textarea class="resize-none w-full h-8 border " name="" id="" cols="" rows=""></textarea>
+          </div> <!--Text Box-->
+          <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
+      </div>
+        <!--Text to be typed and others-->
+        <div class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 sm:w-testing">Main menu (leave race)</div> <!--Leave Race-->
       </div> <!--GameGround after clicking enter a typing race button-->
       
       <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game">
@@ -995,7 +1005,7 @@
         <div class="-mt-2"><img src="./assets/addicting_games.png" alt="" width="100px"></div> <!--Addicting games link--></div> <!--Change theme and additing games pic-->
       </div> <!--Footer-->
       <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle-hide-show">
-        <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hide()"></button> <!--Close Button-->
+        <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hideSideBar()"></button> <!--Close Button-->
         <div class="flex flex-col gap-1">
           <div class="text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
         <hr>
