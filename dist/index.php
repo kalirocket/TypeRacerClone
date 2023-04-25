@@ -88,8 +88,20 @@
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>
         <!--Text to be typed and others-->
-        <div class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 sm:w-testing">Main menu (leave race)</div> <!--Leave Race-->
+      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 sm:w-testing" onclick="showAndQuitGame()">Main menu (leave race)</button> <!--Leave Race-->
+        <div class = "absolute top-12 right-0 flex flex-row w-4/5 h-12" id = "count-element-box">
+          <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-200 h-full justify-evenly items-center">
+            <div class="bg-red-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 1 -->
+            <div class="bg-yellow-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 2 -->
+            <div class="bg-green-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 3 -->
+          </div> <!--Light-->
+          <div class="flex flex-row justify-between items-center w-2/3 border-black border-2 bg-white h-full px-2">
+            <div>Get ready to race!</div>
+            <div class="font-semibold">:09</div>
+          </div> <!--text-->
+        </div> <!--Count down box-->
       </div> <!--GameGround after clicking enter a typing race button-->
+      
       
       <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game">
         <div>Get a TypeRacer Mug for your desk</div>
@@ -778,7 +790,7 @@
             <div><img src="./assets/options.png" alt=""></div> <!--Button-->
           </div> <!--Latest high scores-->
           <div class="rounded-lg w-full text-change_f_size">
-            <table class="text-center text-size_8 w-full border-collapse">
+            <table class="text-center text-size_8 w-full border-collapse md:text-sm">
               <tr class="text-custom_white bg-custom_blue_bg_1">
                 <th class="rounded-tl-lg"></th>
                 <th class="text-left">Name</th>

@@ -147,6 +147,9 @@ module.exports = {
         200: "200px",
         400: "400px",
       },
+      borderWidth: {
+        5 : "5px",
+      }
     },
   },
   plugins: [],
