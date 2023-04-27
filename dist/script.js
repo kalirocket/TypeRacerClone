@@ -29,7 +29,9 @@ function showAndQuitGame() {
 }
 
 function getRandomQuote() {
-  return quotes[Math.floor(Math.random() * Object.keys(quotes).length)].text;
+  let text =
+    quotes[Math.floor(Math.random() * Object.keys(quotes).length)].text;
+  return text;
 }
 function hideSideBar() {
   document.getElementById("toggle-hide-show").style.visibility = "hidden";
@@ -52,5 +54,71 @@ function hideForGame() {
   }
   showforGame();
   let quoteElementDisplay = document.getElementById("quote-element-display");
-  quoteElementDisplay.textContent = getRandomQuote();
+  let textAreaElement = document.getElementById("text-area-element");
+  const quote = getRandomQuote();
+  let words = quote.split(" ");
+  quoteElementDisplay.textContent = quote;
+
+  let lastcompletedWordIndex = 0;
+  let currentWord = words[lastcompletedWordIndex];
+
+  function getSpan(currentWord) {
+    let wordWithSpan = "";
+    for (i in currentWord) {
+      wordWithSpan += `<span class="letter${i}">${currentWord[i]}</span>`;
+    }
+    wordWithSpan = `<span class="underline">${wordWithSpan}</span>`;
+    return wordWithSpan;
+  }
+  let wordWithSpan = getSpan(currentWord);
+  quoteElementDisplay.innerHTML = quoteElementDisplay.innerHTML.replace(
+    currentWord,
+    wordWithSpan
+  );
+  let redAll = false;
+  let highlightedLetters = 0;
+  let letterIndex = 0;
+  let currentWordIndex = 0;
+  textAreaElement.addEventListener("input", () => {
+    if (textAreaElement.value == "") {
+      // Clear all highlight
+      console.log("IsEmpty");
+      for (let i in highlightedLetters){
+        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("text-green-600");
+        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("underline");
+        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("decoration-green-600");
+        highlightedLetters++;
+        letterIndex++;
+      }
+      highlightedLetters = 0;
+    } else {
+      if (textAreaElement.length < highlightedLetters) {
+        // Remove previous highlight
+        if (pass) {
+          // Some red highlight not available
+          redAll = false;
+        }
+      } else {
+        if (redAll) {
+          // Highlight red
+        } else {
+          if (textAreaElement.value[letterIndex] == currentWord[letterIndex]) {
+            // Letter is the same as letter highlight green
+            document.getElementsByClassName(`letter${letterIndex}`)[currentWordIndex].classList.add("text-green-600");
+            document.getElementsByClassName(`letter${letterIndex}`)[currentWordIndex].classList.add("underline");
+            document.getElementsByClassName(`letter${letterIndex}`)[currentWordIndex].classList.add("decoration-green-600");
+            highlightedLetters++;
+            letterIndex++;
+          } else {
+            // Hightlight red
+            document.getElementsByClassName(`letter${letterIndex}`)[currentWordIndex].classList.add("text-red-600");
+            highlightedLetters++;
+            letterIndex++;
+            letterIndex++;
+            highlightedLetters++;
+          }
+        }
+      }
+    }
+  });
 }

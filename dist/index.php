@@ -83,21 +83,21 @@
           <div id="quote-element-display" class="tracking-widest"></div> <!--quote-->
           <div class="text-custom_blue_text flex justify-end text-sm">change display format</div> <!--Display format-->
           <div class="w-full">
-            <textarea class="resize-none w-full h-8 border tracking-widest"  name="" id="" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>
+            <textarea class="resize-none w-full h-8 border tracking-widest"  name="" id="text-area-element" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>
           </div> <!--Text Box-->
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>
         <!--Text to be typed and others-->
-      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 sm:w-testing" onclick="showAndQuitGame()">Main menu (leave race)</button> <!--Leave Race-->
-        <div class = "absolute top-12 right-0 flex flex-row w-4/5 h-12" id = "count-element-box">
-          <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-200 h-full justify-evenly items-center">
+      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 w-full sm:w-testing" onclick="showAndQuitGame()">Main menu (leave race)</button> <!--Leave Race-->
+        <div class = "absolute top-12 right-0 flex flex-row w-4/5 sm:w-1/2 h-12" id = "count-element-box">
+          <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-400 h-full justify-evenly items-center">
             <div class="bg-red-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 1 -->
             <div class="bg-yellow-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 2 -->
             <div class="bg-green-500 rounded-full h-8 w-8 border-2 border-black"></div> <!--Circle 3 -->
           </div> <!--Light-->
           <div class="flex flex-row justify-between items-center w-2/3 border-black border-2 bg-white h-full px-2">
             <div>Get ready to race!</div>
-            <div class="font-semibold">:09</div>
+            <div class="font-semibold" id="get-ready-element">:09</div>
           </div> <!--text-->
         </div> <!--Count down box-->
       </div> <!--GameGround after clicking enter a typing race button-->

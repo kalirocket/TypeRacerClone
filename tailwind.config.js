@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/**/*.{php, js}"],
+  content: ["./dist/**/*.js", "./dist/**/*.php"],
   theme: {
     extend: {
       maxWidth: {
@@ -127,7 +127,6 @@ module.exports = {
         90: "90%",
         75: "75px",
         testing: "230px",
-        
       },
       fontWeight: {
         inner_text: "500",
@@ -148,8 +147,8 @@ module.exports = {
         400: "400px",
       },
       borderWidth: {
-        5 : "5px",
-      }
+        5: "5px",
+      },
     },
   },
   plugins: [],
