@@ -82,14 +82,14 @@ function hideForGame() {
   textAreaElement.addEventListener("input", () => {
     if (textAreaElement.value == "") {
       // Clear all highlight
-      console.log("IsEmpty");
-      for (let i in highlightedLetters){
-        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("text-green-600");
-        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("underline");
-        document.getElementsByClassName(`letter${letterIndex}`)[i].classList.remove("decoration-green-600");
-        highlightedLetters++;
-        letterIndex++;
+      for (let i = 0; i < highlightedLetters; i++){
+        document.getElementsByClassName(`letter${i}`)[currentWordIndex].classList.remove("text-green-600");
+        document.getElementsByClassName(`letter${i}`)[currentWordIndex].classList.remove("text-red-600");
+        document.getElementsByClassName(`letter${i}`)[currentWordIndex].classList.remove("underline");
+        document.getElementsByClassName(`letter${i}`)[currentWordIndex].classList.remove("decoration-green-600");
       }
+      letterIndex = 0;
+      redAll = false;
       highlightedLetters = 0;
     } else {
       if (textAreaElement.length < highlightedLetters) {
@@ -114,8 +114,6 @@ function hideForGame() {
             document.getElementsByClassName(`letter${letterIndex}`)[currentWordIndex].classList.add("text-red-600");
             highlightedLetters++;
             letterIndex++;
-            letterIndex++;
-            highlightedLetters++;
           }
         }
       }
