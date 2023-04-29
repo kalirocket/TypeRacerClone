@@ -796,6 +796,10 @@ hr{
   margin-top: 1.5rem;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
 .flex{
   display: flex;
 }
@@ -890,6 +894,10 @@ hr{
 
 .w-16{
   width: 4rem;
+}
+
+.w-2{
+  width: 0.5rem;
 }
 
 .w-2\/3{
@@ -1105,6 +1113,10 @@ hr{
 
 .overflow-auto{
   overflow: auto;
+}
+
+.rounded{
+  border-radius: 0.25rem;
 }
 
 .rounded-full{
@@ -1647,6 +1659,10 @@ hr{
 
 .underline{
   text-decoration-line: underline;
+}
+
+.no-underline{
+  text-decoration-line: none;
 }
 
 .decoration-green-600{
