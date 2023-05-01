@@ -109,6 +109,7 @@ function hideForGame() {
   // Timer and animation waiting
   let counter = 11;
   let countElementBox = document.getElementsByClassName("count-element-box")[0];
+  countElementBox.style.visibility = "visible";
   let redCircleElement = document.getElementsByClassName("redCircle")[0];
   let yellowCircleElement = document.getElementsByClassName("yellowCircle")[0];
   let greenCircleElement = document.getElementsByClassName("greenCircle")[0];
@@ -136,6 +137,16 @@ function hideForGame() {
       yellowCircleElement.classList.add("bg-yellow-500");
     }
   }, 1000);
+
+  // Check if animation ended?
+  countElementBox.addEventListener('animationend', () => {
+    greenCircleElement.classList.remove("bg-green-500");
+    greenCircleElement.classList.add("bg-slate-600");
+    redCircleElement.classList.remove("bg-slate-600");
+    redCircleElement.classList.add("bg-red-500");
+    countElementBox.style.opacity = 1
+    countElementBox.style.visibility = "hidden";
+  });
 
   // Keys listening
   textAreaElement.addEventListener("input", () => {

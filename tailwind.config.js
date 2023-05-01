@@ -150,7 +150,7 @@ module.exports = {
         5: "5px",
       },
       animation: {
-        'countdownFadeOut': 'countdownFadeOut 5s linear 2s forwards'
+        'countdownFadeOut': 'countdownFadeOut 5s linear 2s'
       },
       keyframes: {
         'countdownFadeOut': {

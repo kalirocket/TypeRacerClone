@@ -995,7 +995,7 @@ hr{
 }
 
 .animate-countdownFadeOut{
-  animation: countdownFadeOut 5s linear 2s forwards;
+  animation: countdownFadeOut 5s linear 2s;
 }
 
 .select-none{
