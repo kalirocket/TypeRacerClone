@@ -32,7 +32,7 @@ function getRandomQuote() {
   let length = Object.keys(quotes).length;
   let decimal = Math.random() * length;
   let rounded = Math.floor(decimal + 1);
-  let output = quotes[rounded].text
+  let output = quotes[rounded].text;
   return output;
 }
 function hideSideBar() {
@@ -57,31 +57,31 @@ function hideForGame() {
   showforGame();
 
   let quoteElementDisplay = document.getElementById("quote-element-display");
+  let textAreaWrapper = document.getElementsByClassName("text-area-wrapper")[0];
   let textAreaElement = document.getElementById("text-area-element");
   const quote = getRandomQuote();
   let words = quote.split(" ");
 
-  const createSpan = function(){
+  const createSpan = function () {
     let textWithSpan = "";
     let letterSpanCombination = "";
-    for (let i in words){
+    for (let i in words) {
       words[i] += " ";
       letterSpanCombination = "";
       let j = 0;
-      for (j in words[i]){
-        if (words[i][j] == " "){
-          letterSpanCombination += `<span class="w${i}l${j} no-underline inline-block w-2">${words[i][j]}</span>`
-        }
-        else {
+      for (j in words[i]) {
+        if (words[i][j] == " ") {
+          letterSpanCombination += `<span class="w${i}l${j} no-underline inline-block w-2 h-4"> </span>`;
+        } else {
           letterSpanCombination += `<span class="w${i}l${j}">${words[i][j]}</span>`;
         }
-        
       }
-        textWithSpan += `<span class="w${i}">${letterSpanCombination}</span>`;
+      textWithSpan += `<span class="w${i}">${letterSpanCombination}</span>`;
     }
     quoteElementDisplay.innerHTML = textWithSpan;
-  }
+  };
   createSpan();
+
   let currentWordIndex = 0;
   let currentWord = words[currentWordIndex];
   let letterIndex = 0;
@@ -89,108 +89,200 @@ function hideForGame() {
   let redHighlight = 0;
   let redAll = false;
   let finishedTyping = false;
-  function getWordAndSpan(){
-      currentWord = words[++currentWordIndex];
-      document.getElementsByClassName(`w${currentWordIndex}`)[0].classList.add("underline")
-    
+  textAreaElement.value = "";
+  textAreaElement.autoComplete = "off";
+  textAreaElement.autoCorrect = "off";
+  textAreaElement.disabled = true;
+  textAreaElement.spellcheck = false;
+  quoteElementDisplay.style.userSelect = "none";
+
+  function getWordAndSpan() {
+    currentWord = words[++currentWordIndex];
+    document
+      .getElementsByClassName(`w${currentWordIndex}`)[0]
+      .classList.add("underline");
   }
-  document.getElementsByClassName(`w${currentWordIndex}`)[0].classList.add("underline");
+  document
+    .getElementsByClassName(`w${currentWordIndex}`)[0]
+    .classList.add("underline");
 
+  // Timer and animation waiting
+  let counter = 11;
+  let countElementBox = document.getElementsByClassName("count-element-box")[0];
+  let redCircleElement = document.getElementsByClassName("redCircle")[0];
+  let yellowCircleElement = document.getElementsByClassName("yellowCircle")[0];
+  let greenCircleElement = document.getElementsByClassName("greenCircle")[0];
 
+  let countDown = setInterval(() => {
+    document.getElementById("get-ready-element").textContent = --counter;
+
+    if (counter == 0) {
+      textAreaElement.disabled = false;
+      textAreaElement.focus();
+      clearTimeout(countDown);
+      yellowCircleElement.classList.remove("bg-yellow-500");
+      yellowCircleElement.classList.add("bg-slate-600");
+      greenCircleElement.classList.remove("bg-slate-600");
+      greenCircleElement.classList.add("bg-green-500");
+    }
+    // Fade out
+    if (counter == 1) {
+      countElementBox.classList.add("animate-countdownFadeOut");
+    }
+    if (counter == 5) {
+      redCircleElement.classList.remove("bg-red-500");
+      redCircleElement.classList.add("bg-slate-600");
+      yellowCircleElement.classList.remove("bg-slate-600");
+      yellowCircleElement.classList.add("bg-yellow-500");
+    }
+  }, 1000);
+
+  // Keys listening
   textAreaElement.addEventListener("input", () => {
-    if (finishedTyping != true){
+    if (finishedTyping != true) {
       // Check the textarea value if empty then clear all highlight
-    if(textAreaElement.value == ""){
-      for (let i in currentWord){
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("underline");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("text-green-600");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("text-red-600");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("decoration-green-600");
-      }
-      letterIndex = 0;
-      highlightedLetter = 0;
-      redHighlight = 0;
-      redAll = false;
-    }
-    else{
-       // Check the length of the text area value
-    if (textAreaElement.value.length < highlightedLetter){
-      document.getElementsByClassName(`w${currentWordIndex}l${highlightedLetter - 1}`)[0].classList.remove("underline");
-      document.getElementsByClassName(`w${currentWordIndex}l${highlightedLetter - 1}`)[0].classList.remove("text-green-600");
-      document.getElementsByClassName(`w${currentWordIndex}l${highlightedLetter - 1}`)[0].classList.remove("text-red-600");
-      document.getElementsByClassName(`w${currentWordIndex}l${highlightedLetter - 1}`)[0].classList.remove("decoration-green-600");
-      highlightedLetter--;
-      letterIndex--;
-
-      // If redHighlight greater than zero
-      if (redHighlight > 0){
-        redHighlight--;
-      }
-      
-      if (redHighlight == 0){
+      if (textAreaElement.value == "") {
+        for (let i in currentWord) {
+          document
+            .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+            .classList.remove("bg-red-600");
+          document
+            .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+            .classList.remove("underline");
+          document
+            .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+            .classList.remove("text-green-600");
+          document
+            .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+            .classList.remove("text-red-600");
+          document
+            .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+            .classList.remove("decoration-green-600");
+        }
+        letterIndex = 0;
+        highlightedLetter = 0;
+        redHighlight = 0;
         redAll = false;
-      }
-    }
-    else{
-      // Red is true then highligt all to be red
-      if (redAll) {
-        document
-          .getElementsByClassName(`w${currentWordIndex}l${letterIndex}`)[0]
-          .classList.add("text-red-600");
-        letterIndex++;
-        redAll = true;
-        redHighlight++
-        highlightedLetter++;
-      }
-      // Red not true then to back to normal higlighting
-      else {
-        if (textAreaElement.value[letterIndex] == currentWord[letterIndex]) {
-          document
-            .getElementsByClassName(`w${currentWordIndex}l${letterIndex}`)[0]
-            .classList.add("text-green-600");
-          document
-            .getElementsByClassName(`w${currentWordIndex}l${letterIndex}`)[0]
-            .classList.add("underline");
-          document
-            .getElementsByClassName(`w${currentWordIndex}l${letterIndex}`)[0]
-            .classList.add("decoration-green-600");
-          letterIndex++;
-          highlightedLetter++;
-        } else {
-          document
-            .getElementsByClassName(`w${currentWordIndex}l${letterIndex}`)[0]
-            .classList.add("text-red-600");
-          letterIndex++;
-          highlightedLetter++;
-          redHighlight++;
-          redAll = true;
+      } else {
+        // when length is the same not more than
+        if (textAreaElement.value.length <= currentWord.length) {
+          // Check the length of the text area value
+          if (textAreaElement.value.length < highlightedLetter) {
+            document
+              .getElementsByClassName(
+                `w${currentWordIndex}l${highlightedLetter - 1}`
+              )[0]
+              .classList.remove("bg-red-600");
+            document
+              .getElementsByClassName(
+                `w${currentWordIndex}l${highlightedLetter - 1}`
+              )[0]
+              .classList.remove("underline");
+            document
+              .getElementsByClassName(
+                `w${currentWordIndex}l${highlightedLetter - 1}`
+              )[0]
+              .classList.remove("text-green-600");
+            document
+              .getElementsByClassName(
+                `w${currentWordIndex}l${highlightedLetter - 1}`
+              )[0]
+              .classList.remove("text-red-600");
+            document
+              .getElementsByClassName(
+                `w${currentWordIndex}l${highlightedLetter - 1}`
+              )[0]
+              .classList.remove("decoration-green-600");
+            highlightedLetter--;
+            letterIndex--;
+
+            // If redHighlight greater than zero
+            if (redHighlight > 0) {
+              redHighlight--;
+            }
+
+            if (redHighlight == 0) {
+              redAll = false;
+            }
+          } else {
+            // Red is true then highligt all to be red
+            if (redAll) {
+              document
+                .getElementsByClassName(
+                  `w${currentWordIndex}l${letterIndex}`
+                )[0]
+                .classList.add("bg-red-600");
+              letterIndex++;
+              redAll = true;
+              redHighlight++;
+              highlightedLetter++;
+            }
+            // Red not true then to back to normal higlighting
+            else {
+              if (
+                textAreaElement.value[letterIndex] == currentWord[letterIndex]
+              ) {
+                document
+                  .getElementsByClassName(
+                    `w${currentWordIndex}l${letterIndex}`
+                  )[0]
+                  .classList.add("text-green-600");
+                document
+                  .getElementsByClassName(
+                    `w${currentWordIndex}l${letterIndex}`
+                  )[0]
+                  .classList.add("underline");
+                document
+                  .getElementsByClassName(
+                    `w${currentWordIndex}l${letterIndex}`
+                  )[0]
+                  .classList.add("decoration-green-600");
+                letterIndex++;
+                highlightedLetter++;
+              } else {
+                document
+                  .getElementsByClassName(
+                    `w${currentWordIndex}l${letterIndex}`
+                  )[0]
+                  .classList.add("bg-red-600");
+                letterIndex++;
+                highlightedLetter++;
+                redHighlight++;
+                redAll = true;
+              }
+            }
+          }
+          if (textAreaElement.value == `${currentWord}`) {
+            textAreaElement.value = "";
+            letterIndex = 0;
+            highlightedLetter = 0;
+            redHighlight = 0;
+            redAll = false;
+            for (let i in currentWord) {
+              document
+                .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+                .classList.remove("underline");
+              document
+                .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+                .classList.remove("text-green-600");
+              document
+                .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+                .classList.remove("text-red-600");
+              document
+                .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
+                .classList.remove("decoration-green-600");
+            }
+            document
+              .getElementsByClassName(`w${currentWordIndex}`)[0]
+              .classList.remove("underline");
+            if (currentWordIndex == words.length - 1) {
+              finishedTyping = true;
+            } else {
+              getWordAndSpan();
+            }
+          }
         }
       }
     }
-    if (textAreaElement.value == `${currentWord}`) {
-      textAreaElement.value = "";
-      letterIndex = 0;
-      highlightedLetter = 0;
-      redHighlight = 0;
-      redAll = false;
-      for (let i in currentWord){
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("underline");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("text-green-600");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("text-red-600");
-        document.getElementsByClassName(`w${currentWordIndex}l${i}`)[0].classList.remove("decoration-green-600");
-      }
-      document.getElementsByClassName(`w${currentWordIndex}`)[0].classList.remove("underline")
-      if (currentWordIndex == (words.length - 1)){
-        finishedTyping = true;
-        console.log(finishedTyping)
-      }
-      else{
-        getWordAndSpan();
-      }
-      
-    }
-  }
-    }
-      
-  })
+  });
 }

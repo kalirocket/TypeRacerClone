@@ -149,6 +149,16 @@ module.exports = {
       borderWidth: {
         5: "5px",
       },
+      animation: {
+        'countdownFadeOut': 'countdownFadeOut 5s linear 2s forwards'
+      },
+      keyframes: {
+        'countdownFadeOut': {
+          '50%' : {opacity: '0'},
+          '100%': {opacity: '0'}
+        }
+      }
+
     },
   },
   plugins: [],
