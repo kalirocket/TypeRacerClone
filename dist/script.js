@@ -19,14 +19,45 @@ const quotes = {
     text: "Fasting for just three days has shown a record increase in the body's HGH levels, about 300%. Intermittent fasting provides a good balance between eating and fasting cycles in the human body. This balance works towards a positive influence on HGH secretions, both in the short and long term.",
   },
 };
+// Global game counter
+let counter = 11;
+let timerRunning = false;
+let inputListenerEnabled = false;
+
+
 function showAndQuitGame() {
-  const elements = document.getElementsByClassName("hide-for-game");
+  setTimeout(() => {
+    const elements = document.getElementsByClassName("hide-for-game");
   document.getElementById("show-for-game").style.visibility = "hidden";
   document.getElementById("show-for-game").style.position = "absolute";
   for (let i = 0; i < elements.length; i++) {
     elements[i].style.visibility = "visible";
     elements[i].style.position = "static";
   }
+  // Clear game cache
+  timerRunning = false;
+  counter = 11;
+  let getReadyElement = document.getElementById("get-ready-element");
+  getReadyElement.textContent = "";
+  let redCircleElement = document.getElementsByClassName("redCircle")[0];
+  let yellowCircleElement = document.getElementsByClassName("yellowCircle")[0];
+  let greenCircleElement = document.getElementsByClassName("greenCircle")[0];
+  let countElementBox = document.getElementsByClassName("count-element-box")[0];
+  
+  // Remove previous classList
+  redCircleElement.classList.remove("bg-slate-600");
+  yellowCircleElement.classList.remove("bg-yellow-500");
+  greenCircleElement.classList.remove("bg-green-500");
+
+  // Add this classList
+  redCircleElement.classList.add("bg-red-500");
+  yellowCircleElement.classList.add("bg-slate-600");
+  greenCircleElement.classList.add("bg-slate-600");
+
+  // Clear animation and make it hidden
+  countElementBox.style.visibility = "hidden";
+  countElementBox.classList.remove("animate-countdownFadeOut");
+  }, 1500);
 }
 
 function getRandomQuote() {
@@ -50,14 +81,19 @@ function showforGame() {
 }
 
 function hideForGame() {
-  const elements = document.getElementsByClassName("hide-for-game");
+  setTimeout(() => {
+    const elements = document.getElementsByClassName("hide-for-game");
   for (let i = 0; i < elements.length; i++) {
     elements[i].style.visibility = "hidden";
     elements[i].style.position = "absolute";
   }
   showforGame();
   gameInitialize();
+  }, 1500);
 }
+
+
+
 
 function gameInitialize(){
   let quoteElementDisplay = document.getElementById("quote-element-display");
@@ -117,10 +153,15 @@ function gameInitialize(){
   // Timer and animation waiting
   //Start actual game and counter
   function startTimerAndGame() {
-    let counter = 11;
+    timerRunning = true;
     let countDown = setInterval(() => {
+      if (timerRunning == false){
+        counter = 11;
+        textAreaElement.removeEventListener("input", checkInput);
+        clearTimeout(countDown);
+        
+      }
       document.getElementById("get-ready-element").textContent = --counter;
-
       if (counter == 0) {
         textAreaElement.disabled = false;
         textAreaElement.focus();
@@ -152,8 +193,16 @@ function gameInitialize(){
       countElementBox.style.visibility = "hidden";
     });
   }
-  startTimerAndGame();
+  setTimeout(startTimerAndGame, 1500);
   
+  
+  // Listening for quit game and clear game cache
+  // let quitGameElement = document.getElementById("quit-game");
+  // quitGameElement.addEventListener("click", () => {
+  //   console.log(true);
+  // })
+
+
   // Keys listening
   textAreaElement.addEventListener("input", checkInput);
   function checkInput(){
@@ -178,6 +227,7 @@ function gameInitialize(){
               .getElementsByClassName(`w${currentWordIndex}l${i}`)[0]
               .classList.remove("decoration-green-600");
           }
+          document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
           letterIndex = 0;
           highlightedLetter = 0;
           redHighlight = 0;
@@ -221,6 +271,7 @@ function gameInitialize(){
               }
 
               if (redHighlight == 0) {
+                document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
                 redAll = false;
               }
             } else {
@@ -231,6 +282,7 @@ function gameInitialize(){
                     `w${currentWordIndex}l${letterIndex}`
                   )[0]
                   .classList.add("bg-red-600");
+                document.getElementsByClassName("text-area")[0].classList.add("bg-red-600");
                 letterIndex++;
                 redAll = true;
                 redHighlight++;
@@ -256,6 +308,7 @@ function gameInitialize(){
                       `w${currentWordIndex}l${letterIndex}`
                     )[0]
                     .classList.add("decoration-green-600");
+                  document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
                   letterIndex++;
                   highlightedLetter++;
                 } else {
@@ -264,6 +317,7 @@ function gameInitialize(){
                       `w${currentWordIndex}l${letterIndex}`
                     )[0]
                     .classList.add("bg-red-600");
+                  document.getElementsByClassName("text-area")[0].classList.add("bg-red-600");
                   letterIndex++;
                   highlightedLetter++;
                   redHighlight++;
