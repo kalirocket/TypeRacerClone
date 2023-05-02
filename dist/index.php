@@ -88,7 +88,7 @@
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>
         <!--Text to be typed and others-->
-      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 w-full sm:w-testing" onclick="showAndQuitGame()">Main menu (leave race)</button> <!--Leave Race-->
+      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 w-full sm:w-testing" id="quit-game" onclick="showAndQuitGame()">Main menu (leave race)</button> <!--Leave Race-->
         <div class = "absolute top-12 right-0 flex flex-row w-4/5 sm:w-1/2 h-12 count-element-box">
           <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-400 h-full justify-evenly items-center">
             <div class="bg-red-500 rounded-full h-8 w-8 border-2 border-black redCircle"></div> <!--Circle 1 -->
