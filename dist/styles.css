@@ -884,6 +884,14 @@ hr{
   height: 300px;
 }
 
+.h-20{
+  height: 5rem;
+}
+
+.h-1{
+  height: 0.25rem;
+}
+
 .w-1\/2{
   width: 50%;
 }

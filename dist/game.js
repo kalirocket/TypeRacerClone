@@ -4,6 +4,7 @@ const typingGame = {
   textAreaElement: document.getElementById("text-area-element"),
   quoteElementDisplay: document.getElementById("quote-element-display"),
   timerElement: document.getElementById("get-ready-element"),
+  getReadyElement: document.getElementById("get-ready-text"),
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
     let decimal = Math.random() * len;
@@ -119,9 +120,13 @@ const typingGame = {
       }
       if (counter == 5){
         this.yellowOnlyAnimate();
+        this.getReadyElement.textContent = "It's final countdown!";
       }
       if (counter == 1){
         this.fadeOut();
+      }
+      if (counter == 0){
+        this.getReadyElement.textContent = "Go!";
       }
     }, 1000);
     
