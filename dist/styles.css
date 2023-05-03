@@ -1623,6 +1623,11 @@ hr{
   line-height: 1.25rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1869,6 +1874,14 @@ hr{
 }
 
 @media (min-width: 768px){
+  .md\:h-10{
+    height: 2.5rem;
+  }
+
+  .md\:w-10{
+    width: 2.5rem;
+  }
+
   .md\:px-200{
     padding-left: 200px;
     padding-right: 200px;
@@ -1877,6 +1890,11 @@ hr{
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

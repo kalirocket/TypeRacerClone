@@ -91,13 +91,13 @@
       <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 w-full sm:w-testing" id="quit-game" onclick="quitGame()">Main menu (leave race)</button> <!--Leave Race-->
         <div class = "absolute top-12 right-0 flex flex-row w-4/5 sm:w-1/2 h-20 count-element-box">
           <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-400 h-full justify-evenly items-center">
-            <div class="bg-red-500 rounded-full h-8 w-8 border-2 border-black redCircle"></div> <!--Circle 1 -->
-            <div class="bg-slate-600 rounded-full h-8 w-8 border-2 border-black yellowCircle"></div> <!--Circle 2 -->
-            <div class="bg-slate-600 rounded-full h-8 w-8 border-2 border-black greenCircle"></div> <!--Circle 3 -->
+            <div class="bg-red-500 rounded-full h-8 w-8 md:h-10 md:w-10 border-2 border-black redCircle"></div> <!--Circle 1 -->
+            <div class="bg-slate-600 rounded-full h-8 w-8 md:h-10 md:w-10 border-2 border-black yellowCircle"></div> <!--Circle 2 -->
+            <div class="bg-slate-600 rounded-full h-8 w-8 md:h-10 md:w-10 border-2 border-black greenCircle"></div> <!--Circle 3 -->
           </div> <!--Light-->
           <div class="flex flex-row justify-between items-center w-2/3 border-black border-2 bg-white h-full px-2">
-            <div id="get-ready-text">Get ready to race!</div>
-            <div class="font-semibold" id="get-ready-element"></div>
+            <div id="get-ready-text" class="text-xl md:text-2xl">Get ready to race!</div>
+            <div class="font-semibold text-xl md:text-2xl" id="get-ready-element"></div>
           </div> <!--text-->
         </div> <!--Count down box-->
       </div> <!--GameGround after clicking enter a typing race button-->
