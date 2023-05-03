@@ -20,6 +20,27 @@ const typingGame = {
     5: {
       text: "Fasting for just three days has shown a record increase in the body's HGH levels, about 300%. Intermittent fasting provides a good balance between eating and fasting cycles in the human body. This balance works towards a positive influence on HGH secretions, both in the short and long term.",
     },
+    6: {
+      text: "You only live once, but if you do it right, once is enough.",
+    },
+    7: {
+      text: "Many of life’s failures are people who did not realize how close they were to success when they gave up.",
+    },
+    8: {
+      text: "Never let the fear of striking out keep you from playing the game.",
+    },
+    9: {
+      text: "My father, who was from a wealthy family and highly educated, a lawyer, Yale and Columbia, walked out with the benefit of a healthy push from my mother, a seventh grade graduate, who took a typing course and got a secretarial job as fast as she could.",
+    },
+    10: {
+      text: "Dynamic typing is not necessarily good. You get static errors at run time, which you really should be able to catch at compile time.",
+    },
+    11: {
+      text: "Over the years, I've trained myself to speak using the same language I would use if I were typing: meaning using full sentences in the way that paragraphs and scenes are arranged.",
+    },
+    12: {
+      text: "",
+    }
   },
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
@@ -288,6 +309,7 @@ const typingGame = {
 
     // Testing and clearing stuffs
     this.endCountAnimation();
+    this.countElementBox.style.visibility = "hidden";
 
     // Animationend terminate
     this.countElementBox.removeEventListener("animationend", () => {
@@ -298,7 +320,8 @@ const typingGame = {
       this.countElementBox.style.opacity = 1;
       this.countElementBox.style.visibility = "hidden";
     })
-    // //Input terminate
+    
+    // Input terminate
     this.textAreaElement.removeEventListener("input", this.checkInputBind);
   },
 };
