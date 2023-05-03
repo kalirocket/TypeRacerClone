@@ -277,6 +277,7 @@ const typingGame = {
     // Testing and clearing stuffs
     this.endCountAnimation();
     this.countElementBox.style.visibility = "hidden";
+    this.getReadyElement.textContent = "Get ready to race!";
 
     // Animationend terminate
     this.countElementBox.removeEventListener("animationend", () => {
