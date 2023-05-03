@@ -275,6 +275,6 @@
       <!--Mini profile-->
     </div>
     <!--Sidebar-->
-    <script src="./script.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
