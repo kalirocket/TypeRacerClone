@@ -193,9 +193,17 @@ const typingGame = {
     let progress = (++this.wordsCompleted / this.words.length) * 100;
     let position = progress * (this.raceTrack / 100) + this.carMarginLeft;
     this.carElement.style.marginLeft = `${position}px`;
+
+    if (progress == 100){
+      this.fullWidthClass = document.getElementsByClassName("fullwidth")[0];
+      this.fullWidthClass.classList.remove("justify-start");
+      this.fullWidthClass.classList.add("justify-end");
+    }
   },
   progressPercentageReset: function (){
     this.wordsCompleted = 0;
+    this.fullWidthClass.classList.remove("justify-end");
+    this.fullWidthClass.classList.add("justify-start");
   },
   checkInput(){
   

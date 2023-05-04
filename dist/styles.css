@@ -796,6 +796,22 @@ hr{
   margin-top: 1.5rem;
 }
 
+.mr-20{
+  margin-right: 5rem;
+}
+
+.mr-16{
+  margin-right: 4rem;
+}
+
+.mr-14{
+  margin-right: 3.5rem;
+}
+
+.mr-12{
+  margin-right: 3rem;
+}
+
 .inline-block{
   display: inline-block;
 }
