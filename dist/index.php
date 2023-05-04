@@ -68,8 +68,8 @@
           <div id="bid-timer"></div>
         </div> <!--Race is about to start, go, timer to end race-->
         <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
-          <div class="border-b-2 border-dashed border-side_create w-90">
-            <div class="w-50 sm:w-75 flex flex-row gap-x-1 ml-14 relative">
+          <div class="border-b-2 border-dashed border-side_create w-90" id="full-width">
+            <div class="w-50 sm:w-75 flex flex-row gap-x-1 ml-14 relative" id="car-movement">
               <div class="font-semibold text-sm sm:text-base">
                 <div>Guest</div>
                 <div class="flex justify-end -mt-2">(you)</div>

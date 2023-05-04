@@ -6,6 +6,8 @@ const typingGame = {
   timerElement: document.getElementById("get-ready-element"),
   getReadyElement: document.getElementById("get-ready-text"),
   bidTimerElement: document.getElementById("bid-timer"),
+  carElement: document.getElementById("car-movement"),
+  fullWidth: document.getElementById("full-width"),
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
     let decimal = Math.random() * len;
@@ -65,6 +67,11 @@ const typingGame = {
     this.countElementBox.style.visibility = "visible";
     this.bidTimerElement.textContent = "";
     this.wordsCompleted = 0;
+
+    this.carWidth = this.carElement.clientWidth;
+    this.fullWidth = this.fullWidth.clientWidth;
+    this.carMarginLeft = 56;
+    this.raceTrack = this.fullWidth - this.carMarginLeft - this.carWidth - 50;
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
@@ -183,7 +190,9 @@ const typingGame = {
     this.bidTimerElement.textContent = "";
   },
   progressPercentage: function () {
-    console.log(`${(++this.wordsCompleted / this.words.length) * 100}%`);
+    let progress = (++this.wordsCompleted / this.words.length) * 100;
+    let position = progress * (this.raceTrack / 100) + this.carMarginLeft;
+    this.carElement.style.marginLeft = `${position}px`;
   },
   progressPercentageReset: function (){
     this.wordsCompleted = 0;
