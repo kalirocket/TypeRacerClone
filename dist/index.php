@@ -65,7 +65,7 @@
       <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
         <div class="flex flex-row justify-between">
           <div class="text-custom_blue_text font-bold text-sm sm:text-lg">The race is about to start!</div> <!--Race is about to start-->
-          <div >0:0</div>
+          <div id="bid-timer"></div>
         </div> <!--Race is about to start, go, timer to end race-->
         <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
           <div class="border-b-2 border-dashed border-side_create w-90">
