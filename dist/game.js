@@ -64,6 +64,7 @@ const typingGame = {
     this.countElementBox.classList.remove("animate-countdownFadeOut");
     this.countElementBox.style.visibility = "visible";
     this.bidTimerElement.textContent = "";
+    this.wordsCompleted = 0;
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
@@ -114,7 +115,6 @@ const typingGame = {
     counter = 11;
     this.countDown = setInterval(() => {
       this.timerElement.textContent = --counter;
-      this.bidTimerElement.textContent = counter;
       if (counter == 0){
         clearInterval(this.countDown);
         this.greenOnlyAnimate();
@@ -130,6 +130,8 @@ const typingGame = {
       }
       if (counter == 0){
         this.getReadyElement.textContent = "Go!";
+
+        // Bid timer start
         this.bidTimerStart();
       }
     }, 1000);
@@ -164,9 +166,6 @@ const typingGame = {
       }
 
       // Add preceding zeros to single digits
-      if (x < 10){
-        x = `0${x}`;
-      }
       if (y < 10){
         y = `0${y}`;
       }
@@ -182,6 +181,12 @@ const typingGame = {
   bidTimerStop: function () {
     clearInterval(this.bidTime);
     this.bidTimerElement.textContent = "";
+  },
+  progressPercentage: function () {
+    console.log(`${(++this.wordsCompleted / this.words.length) * 100}%`);
+  },
+  progressPercentageReset: function (){
+    this.wordsCompleted = 0;
   },
   checkInput(){
   
@@ -267,8 +272,10 @@ const typingGame = {
             }
             document.getElementsByClassName(`w${this.currentWordIndex}`)[0].classList.remove("underline");
             if (this.currentWordIndex == this.words.length - 1) {
+              this.progressPercentage()
               this.finishedTyping = true;
             } else {
+              this.progressPercentage();
               this.getNextUnderlineWord();
             }
           }
@@ -332,6 +339,9 @@ const typingGame = {
     // Bid timer terminate
     this.bidTimerStop();
 
+    // Progress percentage terminate
+    this.progressPercentageReset();
+
     // Input terminate
     this.textAreaElement.removeEventListener("input", this.checkInputBind);
   },
@@ -355,7 +365,7 @@ const typingGame = {
       text: "You only live once, but if you do it right, once is enough.",
     },
     7: {
-      text: "Many of life’s failures are people who did not realize how close they were to success when they gave up.",
+      text: "Many of life's failures are people who did not realize how close they were to success when they gave up.",
     },
     8: {
       text: "Never let the fear of striking out keep you from playing the game.",
