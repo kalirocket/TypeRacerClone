@@ -772,6 +772,10 @@ hr{
   margin-left: 1rem;
 }
 
+.mr-12{
+  margin-right: 3rem;
+}
+
 .mr-2{
   margin-right: 0.5rem;
 }
@@ -794,22 +798,6 @@ hr{
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mr-20{
-  margin-right: 5rem;
-}
-
-.mr-16{
-  margin-right: 4rem;
-}
-
-.mr-14{
-  margin-right: 3.5rem;
-}
-
-.mr-12{
-  margin-right: 3rem;
 }
 
 .inline-block{

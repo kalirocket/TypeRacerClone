@@ -8,6 +8,7 @@ const typingGame = {
   bidTimerElement: document.getElementById("bid-timer"),
   carElement: document.getElementById("car-movement"),
   fullWidth: document.getElementById("full-width"),
+  fullWidthClass: document.getElementsByClassName("fullwidth")[0],
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
     let decimal = Math.random() * len;
@@ -69,9 +70,9 @@ const typingGame = {
     this.wordsCompleted = 0;
 
     this.carWidth = this.carElement.clientWidth;
-    this.fullWidth = this.fullWidth.clientWidth;
+    this.fullWidthVar = this.fullWidth.clientWidth;
     this.carMarginLeft = 56;
-    this.raceTrack = this.fullWidth - this.carMarginLeft - this.carWidth - 50;
+    this.raceTrack = this.fullWidthVar - this.carMarginLeft - this.carWidth - 50;
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
