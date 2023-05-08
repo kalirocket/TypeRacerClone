@@ -193,7 +193,9 @@ const typingGame = {
   progressPercentage: function () {
     let progress = (++this.wordsCompleted / this.words.length) * 100;
     let position = progress * (this.raceTrack / 100) + this.carMarginLeft;
-    this.carElement.style.marginLeft = `${position}px`;
+    this.delayPosition = setTimeout(() => {
+      this.carElement.style.marginLeft = `${position}px`;
+    }, 1000)
 
     if (progress == 100){
       this.fullWidthClass = document.getElementsByClassName("fullwidth")[0];
@@ -205,6 +207,8 @@ const typingGame = {
     this.wordsCompleted = 0;
     this.fullWidthClass.classList.remove("justify-end");
     this.fullWidthClass.classList.add("justify-start");
+    clearTimeout(this.delayPosition);
+    this.carElement.style.marginLeft = '56px';
   },
   checkInput(){
   
