@@ -9,6 +9,8 @@ const typingGame = {
   carElement: document.getElementById("car-movement"),
   fullWidth: document.getElementById("full-width"),
   fullWidthClass: document.getElementsByClassName("fullwidth")[0],
+  wpmElement: document.getElementById("wpm-element"),
+  raceTextElement: document.getElementById("race-status-element"),
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
     let decimal = Math.random() * len;
@@ -68,11 +70,15 @@ const typingGame = {
     this.countElementBox.style.visibility = "visible";
     this.bidTimerElement.textContent = "";
     this.wordsCompleted = 0;
+    this.raceTextElement.textContent = "The race is about to start!";
 
     this.carWidth = this.carElement.clientWidth;
     this.fullWidthVar = this.fullWidth.clientWidth;
     this.carMarginLeft = 56;
     this.raceTrack = this.fullWidthVar - this.carMarginLeft - this.carWidth - 50;
+
+    this.wpmTime = 0;
+    this.characters = 0;
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
@@ -162,14 +168,22 @@ const typingGame = {
     let counter = 180;
     let x = 0;
     let y = 0;
+
+    this.raceTextElement.textContent = "The race is on! Type the text below:";
+    // Wpm time
+      
+    
     this.bidTime = setInterval(() => {
+
+      // Wpm time update
+      this.wordPerMinute();
       // Check how many minutes
       if (counter >= 60){
         x = Math.floor(counter / 60);
         y = counter % 60;
       }
       else{
-        x = 0;
+        x = "";
         y = counter;
       }
 
@@ -210,8 +224,12 @@ const typingGame = {
     clearTimeout(this.delayPosition);
     this.carElement.style.marginLeft = '56px';
   },
+  wordPerMinute: function () {
+    this.wpmTime++;
+    this.wpmElement.textContent = `${Math.floor((this.characters / 5) / (this.wpmTime / 60))} wpm`; 
+    
+  },
   checkInput(){
-  
     if (this.finishedTyping != true) {
       // Check the textarea value if empty then clear all highlight
       if (this.textAreaElement.value == "") {
@@ -270,6 +288,7 @@ const typingGame = {
                 document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
                 this.letterIndex++;
                 this.highlightedLetter++;
+                this.characters++;
               } else {
                 document.getElementsByClassName(`w${this.currentWordIndex}l${this.letterIndex}`)[0].classList.add("bg-red-600");
                 document.getElementsByClassName("text-area")[0].classList.add("bg-red-600");
@@ -277,6 +296,7 @@ const typingGame = {
                 this.highlightedLetter++;
                 this.redHighlight++;
                 this.redAll = true;
+                
               }
             }
           }
@@ -296,6 +316,7 @@ const typingGame = {
             if (this.currentWordIndex == this.words.length - 1) {
               this.progressPercentage()
               this.finishedTyping = true;
+              this.bidTimerStop();
             } else {
               this.progressPercentage();
               this.getNextUnderlineWord();

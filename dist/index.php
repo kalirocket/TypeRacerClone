@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>Typeracer -Play Typing Games and Race Friends</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css">
     
   </head>
   <body class="bg-border_color">
@@ -64,7 +64,7 @@
     <div class="container max-w-max mx-auto">
       <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
         <div class="flex flex-row justify-between">
-          <div class="text-custom_blue_text font-bold text-sm sm:text-lg">The race is about to start!</div> <!--Race is about to start-->
+          <div class="text-custom_blue_text font-bold text-sm sm:text-lg" id="race-status-element">The race is about to start!</div> <!--Race is about to start-->
           <div id="bid-timer"></div>
         </div> <!--Race is about to start, go, timer to end race-->
         <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
@@ -77,7 +77,7 @@
               <img src="./assets/basic-orange.svg" alt="" width=""> <!--Car-->
           </div> <!--car and name-->
           </div> <!--Race track and car-->
-          <div>0 wpm</div> <!--WPM-->
+          <div id="wpm-element">0 wpm</div> <!--WPM-->
         </div> <!--user-->
         <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2">
           <div id="quote-element-display" class="tracking-widest"></div> <!--quote-->
@@ -988,73 +988,9 @@
       </div>
       <!--Main content-->
     </div>
-    <div class="w-full mt-4 bg-custom_blue_bg_1 text-custom_white flex flex-col justify-center items-center gap-4 px-3 py-5 2xl:flex-row 2xl:justify-between 2xl:px-400">
-        <div class=" flex flex-col items-center gap-4 px-3 py-5"><ul class="text-size_2 flex flex-wrap justify-center px-6">
-          <li>Home |</li>
-          <li>Terms of Service |</li>
-          <li>Privacy Policy |</li>
-          <li>Contact |</li>
-          <li>Contribute |</li>
-          <li>Keyboard Shortcuts |</li>
-          <li>FAQ</li>
-        </ul> <!--Links-->
-        <div class="text-size_2">&copy; 2008-2023 Addicting Games, Inc.</div>
-        <div class="flex flex-row justify-center items-center gap-4">
-          <div><img src="./assets/discord_white.svg" alt="" width="25px"></div> <!--Discord-->
-          <div><img src="./assets/facebook_white.svg" alt="" width="25px"></div><!--Facebook-->
-          <div><img src="./assets/tiktok_white.svg" alt="" width="25px"></div><!--Tiktok-->
-          <div><img src="./assets/youtube_white.svg" alt="" width="25px"></div><!--Youtube-->
-          <div><img src="./assets/twitter_white.svg" alt="" width="25px"></div><!--Twitter-->
-          
-        </div> <!--Socials--></div> <!--Links and something wrapper-->
-        <div class="flex flex-col items-center gap-4 px-3 py-5"><div class="flex flex-row rounded-md bg-sky-500 h-change_theme_button justify-center items-center gap-8 theme:h-change_theme_button2 px-100 md:px-200 xl:px-100 -mt-8">
-          <div class="flex flex-col text-size_1 items items-center justify-center font-bold text-custom_white pl-8 theme:flex-row gap-1 theme:pl-0">
-            <div>Change</div>
-            <div class="-mt-2 theme:-mt-0">Theme</div>
-          </div>
-          <div><img src="./assets/theme_button.png" alt=""></div>
-      </div> <!--Theme Change-->
-        <div class="-mt-2"><img src="./assets/addicting_games.png" alt="" width="100px"></div> <!--Addicting games link--></div> <!--Change theme and additing games pic-->
-      </div> <!--Footer-->
-      <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle-hide-show">
-        <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hideSideBar()"></button> <!--Close Button-->
-        <div class="flex flex-col gap-1">
-          <div class="text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
-        <hr>
-        <div class="text-custom_white">Updates</div>
-        <hr>
-        <div class="text-custom_white">Discord</div>
-        <hr>
-        <div class="text-custom_white">About</div>
-        <hr>
-        <div class="text-custom_white">Merch</div>
-        </div> <!--Links Wrapper-->
-        <div class="h-profilemini bg-white rounded-lg px-2">
-          <div class="flex flex-col justify-center items-center mt-2">
-            <div class="h-profile_height w-profile_width rounded-full border-black shadow-md"></div> <!--Profile Icon-->
-            <div class="text-custom_blue_bg_2 font-bold">Guest</div> <!--Profilename-->
-            <div class="flex flex-row justify-center items-center gap-1">
-              <div class="text-custom_blue_bg_2 font-bold">Sign In</div>
-              <div class="mt-1"><img src="./assets/profile_pic.png" alt=""></div>
-            </div> <!--Sign Out-->
-          </div> <!--Profile-->
-          <div class="text-size_2 font-bold opacity-90">
-            <hr class="opacity-100 h-hr_h bg-gray-300">
-            <div>Skill Level</div>
-            <div class="text-custom_blue_bg_2">Average</div>
-            <hr class="opacity-100 h-hr_h bg-gray-300">
-            <div>Avg. Speed</div>
-            <div class="text-custom_blue_bg_2">0 WPM</div>
-            <hr class="opacity-100 h-hr_h bg-gray-300">
-            <div>Races</div>
-            <div class="text-custom_blue_bg_2">0</div>
-            <hr class="opacity-100 h-hr_h bg-gray-300">
-            <div>Points</div>
-            <div class="text-custom_blue_bg_2">0</div>
-        </div> <!--Info-->
-        </div> <!--Mini profile-->
-      </div> <!--Sidebar--></div> <!--All items wrapper-->
-
+    
+      
+    </div> <!--All items wrapper-->
     <script src="./main.js"></script>
     <script src="./game.js"></script>
   </body>
