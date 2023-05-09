@@ -65,7 +65,7 @@
       <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
         <div class="flex flex-row justify-between">
           <div class="text-custom_blue_text font-bold text-sm sm:text-lg" id="race-status-element">The race is about to start!</div> <!--Race is about to start-->
-          <div id="bid-timer"></div>
+          <div id="bid-timer" class="font-semibold"></div>
         </div> <!--Race is about to start, go, timer to end race-->
         <div class="flex flex-row justify-between w-full items-center text-game_text mt-4">
           <div class="border-b-2 border-dashed border-side_create w-90 flex flex-row justify-start fullwidth" id="full-width">
@@ -77,10 +77,10 @@
               <img src="./assets/basic-orange.svg" alt="" width=""> <!--Car-->
           </div> <!--car and name-->
           </div> <!--Race track and car-->
-          <div id="wpm-element">0 wpm</div> <!--WPM-->
+          <div id="wpm-element" class="font-black text-size_8 sm:text-base">0 wpm</div> <!--WPM-->
         </div> <!--user-->
         <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2">
-          <div id="quote-element-display" class="tracking-widest"></div> <!--quote-->
+          <div id="quote-element-display" class="tracking-widest opacity-100"></div> <!--quote-->
           <div class="text-custom_blue_text flex justify-end text-sm">change display format</div> <!--Display format-->
           <div class="w-full text-area-wrapper select-none">
             <textarea  class="resize-none w-full h-8 border tracking-widest text-area"  name="" id="text-area-element" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>

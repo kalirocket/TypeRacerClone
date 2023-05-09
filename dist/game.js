@@ -209,7 +209,7 @@ const typingGame = {
     let position = progress * (this.raceTrack / 100) + this.carMarginLeft;
     this.delayPosition = setTimeout(() => {
       this.carElement.style.marginLeft = `${position}px`;
-    }, 1000)
+    }, 1000);
 
     if (progress == 100){
       this.fullWidthClass = document.getElementsByClassName("fullwidth")[0];
