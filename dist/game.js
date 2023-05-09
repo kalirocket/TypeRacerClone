@@ -269,7 +269,7 @@ const typingGame = {
             }
           } else {
             // Red is true then highligt all to be red
-            if (this.redAll) {
+            if (this.redAll && this.letterIndex <= this.currentWord.length) {
               document.getElementsByClassName(`w${this.currentWordIndex}l${this.letterIndex}`)[0].classList.add("bg-red-600");
               document.getElementsByClassName("text-area")[0].classList.add("bg-red-600");
               this.letterIndex++;
