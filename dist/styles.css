@@ -668,6 +668,29 @@ hr{
   }
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.not-sr-only{
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
 .visible{
   visibility: visible;
 }
@@ -968,8 +991,16 @@ hr{
   width: 40px;
 }
 
+.w-screen{
+  width: 100vw;
+}
+
 .w-sidebar{
   width: 300px;
+}
+
+.min-w-\[320px\]{
+  min-width: 320px;
 }
 
 .max-w-max{
@@ -1143,8 +1174,24 @@ hr{
   overflow: auto;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
 .overflow-x-hidden{
   overflow-x: hidden;
+}
+
+.overflow-y-clip{
+  overflow-y: clip;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 
 .rounded{
@@ -1327,6 +1374,11 @@ hr{
 .bg-yellow-500{
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-all{
@@ -1636,15 +1688,6 @@ hr{
   line-height: 1.75rem;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.font-\[590\]{
-  font-weight: 590;
-}
-
 .font-black{
   font-weight: 900;
 }
@@ -1868,11 +1911,6 @@ hr{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 647px){
@@ -1922,28 +1960,30 @@ hr{
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
 }
 
 @media (min-width: 1024px){
-  .lg\:visible{
-    visibility: visible;
-  }
-
-  .lg\:invisible{
-    visibility: hidden;
-  }
-
-  .lg\:static{
-    position: static;
-  }
-
-  .lg\:absolute{
+  .lg\:sr-only{
     position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .lg\:not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 
   .lg\:-ml-3{

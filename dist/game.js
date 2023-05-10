@@ -229,6 +229,9 @@ const typingGame = {
     this.wpmElement.textContent = `${Math.floor((this.characters / 5) / (this.wpmTime / 60))} wpm`; 
     
   },
+  raceStatus: function () {
+    
+  },
   checkInput(){
     if (this.finishedTyping != true) {
       // Check the textarea value if empty then clear all highlight

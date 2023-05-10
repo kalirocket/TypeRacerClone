@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="./styles.css">
     
   </head>
-  <body class="bg-border_color h-full w-full overflow-x-hidden">
-    <div class="h-70 w-full bg-background_all bg-no-repeat bg-cover lg:text-110"><div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
+  <body class="bg-border_color w-screen relative">
+    <div class="h-70 bg-background_all bg-no-repeat bg-cover lg:text-110 w-full">
+    </div>
+    <div class="absolute top-0 w-full overflow-y-scroll overflow-x-hidden">
+      <div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
         <div class="flex flex-row justify-between items-center w-header">
           <div class="flex flex-row items-center lg:gap-x-8 lg:-ml-7">
             <div>
@@ -25,7 +28,7 @@
             >
               <a href="./index.php">typeracer</a>
             </div>
-            <div class="absolute invisible lg:visible lg:static flex flex-row gap-x-8">
+            <div class="sr-only lg:not-sr-only flex flex-row gap-x-8">
               <div class="text-size_1 text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
             <div class="text-size_1 text-custom_white"><a href="#">Updates</a></div>
             <div class="text-size_1 text-custom_white"><a href="#">Discord</a></div>
@@ -33,10 +36,9 @@
             <div class="text-custom_white"><a href="#">Merch</a></div>
           </div>
           </div>
-          <!--<div class="mt-6 rounded-md bg-cyan-500 flex items-center"><img src="./assets/helmet_small.svg" alt="" width="50px"></div>-->
           <!--header and logo and other items-->
           <div class="lg:-mr-7">
-            <div class="invisible absolute lg:visible lg:static flex flex-row gap-x-2">
+            <div class="sr-only lg:not-sr-only flex flex-row gap-x-2">
               <div class="bg-cyan-500 w-50 rounded-md"><img src="./assets/helmet_small.svg" alt=""></div> <!--Pic-->
               <div class="flex flex-col justify-start">
                 <div class="text-custom_white font-semibold">Guest</div>
@@ -49,7 +51,7 @@
               </div> <!--Username and other info-->
               
             </div>
-            <button class="static visible lg:invisible lg:absolute" onclick="showSideBar()">
+            <button class="not-sr-only lg:sr-only" onclick="showSideBar()">
               <img
                 src="./assets/hamburger_logo.jpg"
                 alt="hamburger_logo"
@@ -57,7 +59,7 @@
               />
             </button>
           </div>
-          <!--sidebar-->
+          <!--sidebar and button-->
         </div>
       </div>
       <!--Header with sidebar-->
@@ -1053,7 +1055,9 @@
             <div class="text-custom_blue_bg_2">0</div>
         </div> <!--Info-->
         </div> <!--Mini profile-->
-      </div> <!--Sidebar--></div> <!--All items wrapper-->
+      </div> <!--Sidebar-->
+    </div> 
+    <!--All items wrapper-->
 
     <script src="./main.js"></script>
     <script src="./game.js"></script>
