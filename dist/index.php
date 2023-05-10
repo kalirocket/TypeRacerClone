@@ -11,7 +11,7 @@
   </head>
   <body class="bg-border_color w-screen relative">
     <div class="h-70 bg-background_all bg-no-repeat bg-cover lg:text-110 w-full">
-    </div>
+    </div> <!--image-->
     <div class="absolute top-0 w-full overflow-y-scroll overflow-x-hidden">
       <div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
         <div class="flex flex-row justify-between items-center w-header">

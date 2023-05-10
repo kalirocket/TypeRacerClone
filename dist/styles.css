@@ -999,10 +999,6 @@ hr{
   width: 300px;
 }
 
-.min-w-\[320px\]{
-  min-width: 320px;
-}
-
 .max-w-max{
   max-width: 910px;
 }
@@ -1174,20 +1170,8 @@ hr{
   overflow: auto;
 }
 
-.overflow-hidden{
-  overflow: hidden;
-}
-
-.overflow-y-auto{
-  overflow-y: auto;
-}
-
 .overflow-x-hidden{
   overflow-x: hidden;
-}
-
-.overflow-y-clip{
-  overflow-y: clip;
 }
 
 .overflow-y-scroll{
@@ -1374,11 +1358,6 @@ hr{
 .bg-yellow-500{
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
-}
-
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-all{
