@@ -875,16 +875,16 @@ hr{
   height: 435px;
 }
 
-.h-70{
-  height: 70vh;
-}
-
 .h-8{
   height: 2rem;
 }
 
 .h-85{
   height: 85px;
+}
+
+.h-\[70\%\]{
+  height: 70%;
 }
 
 .h-change_theme_button{
@@ -913,14 +913,6 @@ hr{
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[\]{
-  height: ;
-}
-
-.h-\[70\%\]{
-  height: 70%;
 }
 
 .w-1\/2{

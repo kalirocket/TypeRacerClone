@@ -1,5 +1,5 @@
 const typingGame = {
-  gameElement: document.getElementById("show-for-game"),
+  gameElement: document.getElementsByClassName("show-for-game")[0],
   nonGameElements: document.getElementsByClassName("hide-for-game"),
   textAreaElement: document.getElementById("text-area-element"),
   quoteElementDisplay: document.getElementById("quote-element-display"),
@@ -19,23 +19,25 @@ const typingGame = {
     return quote;
   },
   hideGameElements: function () {
-    this.gameElement.style.visibility = "hidden";
-    this.gameElement.style.position = "absolute";
+    this.gameElement.classList.remove("not-sr-only");
+    this.gameElement.classList.remove("relative")
+    this.gameElement.classList.add("sr-only");
   },
   hideNonGameElements: function () {
     for (let i = 0; i < this.nonGameElements.length; i++) {
-      this.nonGameElements[i].style.visibility = "hidden";
-      this.nonGameElements[i].style.position = "absolute";
+      this.nonGameElements[i].classList.remove("not-sr-only");
+      this.nonGameElements[i].classList.add("sr-only");
     }
   },
   showGameElements: function () {
-    this.gameElement.style.position = "relative";
-    this.gameElement.style.visibility = "visible";
+    this.gameElement.classList.remove("sr-only");
+    this.gameElement.classList.add("not-sr-only");
+    this.gameElement.classList.add("relative");
   },
   showNonGameElements: function () {
     for (let i = 0; i < this.nonGameElements.length; i++) {
-      this.nonGameElements[i].style.visibility = "visible";
-      this.nonGameElements[i].style.position = "static";
+      this.nonGameElements[i].classList.remove("sr-only");
+      this.nonGameElements[i].classList.add("not-sr-only");
     }
   },
   quoteSpan: function () {

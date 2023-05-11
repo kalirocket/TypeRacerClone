@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./styles.css">
     
   </head>
-  <body class="bg-border_color w-screen h-screen relative overflow-x-hidden overflow-y-scroll">
-    <div class="h-[70%] bg-background_all bg-no-repeat bg-cover lg:text-110 w-full absolute top-0 overflow-hidden">
+  <body class="bg-border_color w-screen h-screen relative">
+  <div class="h-[70%] w-full bg-background_all bg-no-repeat bg-cover lg:text-110">
     </div> <!--image-->
-    <div class="w-full h-full overflow-y-scroll overflow-x-hidden absolute top-0">
+    <div class="absolute top-0 w-full h-full">
       <div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
         <div class="flex flex-row justify-between items-center w-header">
           <div class="flex flex-row items-center lg:gap-x-8 lg:-ml-7">
@@ -64,7 +64,7 @@
       </div>
       <!--Header with sidebar-->
     <div class="container max-w-max mx-auto">
-      <div class="absolute invisible bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
+      <div class="bg-white p-4 mx-2 mt-4 rounded-lg show-for-game sr-only">
         <div class="flex flex-row justify-between">
           <div class="text-custom_blue_text font-bold text-sm sm:text-lg" id="race-status-element">The race is about to start!</div> <!--Race is about to start-->
           <div id="bid-timer" class="font-semibold"></div>
@@ -105,14 +105,14 @@
       </div> <!--GameGround after clicking enter a typing race button-->
       
       
-      <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game">
+      <div class="bg-white mx-2 my-4 py-4 rounded-lg text-custom_blue_text flex flex-col justify-center items-center text-size_4 opacity-95 hide-for-game not-sr-only">
         <div>Get a TypeRacer Mug for your desk</div>
     <div class="text-size_2">T-Shirts, Hoodies, Hats and more on the official merch store!</div>
     <div class="text-custom_orange text-size_3">Click Here!</div>
   </div> <!--Adverts-->
       <div class="grid grid-cols-1 gap-4 mt-4 px-1">
         <div
-          class="bg-redcar bg-no-repeat bg-right-bottom bg-50% bg-white rounded-lg p-custom_p1 shadow-custom_shadow hide-for-game"
+          class="bg-redcar bg-no-repeat bg-right-bottom bg-50% bg-white rounded-lg p-custom_p1 shadow-custom_shadow hide-for-game not-sr-only"
         >
           <div class="flex flex-col justify-center space-y-4">
             <div>
@@ -183,7 +183,7 @@
           <!--Items-->
         </div>
         <!--Typeracer-The Global....-->
-        <div class="flex flex-col gap-4 lg:flex lg:flex-row lg:justify-between hide-for-game"><div
+        <div class="flex flex-col gap-4 lg:flex lg:flex-row lg:justify-between hide-for-game not-sr-only"><div
           class="bg-oldredcar bg-no-repeat bg-right-bottom bg-40% bg-white rounded-lg p-custom_p1 shadow-custom_shadow flex flex-col space-y-4 lg:w-49 "
         >
           <div>
@@ -230,8 +230,7 @@
           <div class="mt-2 bg-orange-600 rounded-md p-4 w-button1 text-size_3 font-bold">Create Your Account</div>
         </div> <!--Create Account-->
         <div
-          class="bg-white rounded-md h-435 overflow-auto pt-4 px-4 gap-4 grid 647:h-auto 647:flex static hide-for-game" 
-        >
+          class="bg-white rounded-md h-435 overflow-auto pt-4 px-4 gap-4 grid 647:h-auto 647:flex hide-for-game not-sr-only">
           <div
             class="bg-all bg-no-repeat rounded-lg h-195 bg-top bg-custom_blue_bg_1 flex flex-col justify-between 647:w-32.4 flex-shrink-0"
           >
@@ -972,7 +971,7 @@
           </div> <!--Refresh Button and timer-->
         </div>
         <!--Latest high scores-->
-        <div class="bg-school_bg rounded-md bg-school bg-no-repeat bg-cover flex flex-col p-4 mx-2 gap-3 mb-10 h-full hide-for-game">
+        <div class="bg-school_bg rounded-md bg-school bg-no-repeat bg-cover flex flex-col p-4 mx-2 gap-3 mb-10 h-full hide-for-game not-sr-only">
           <div class="text-2xl text-custom_blue_text font-semibold">TypeRacer School Edition Features
         </div>
         <div class="text-sm font-semibold opacity-80">You get the same award-winning product as typeracer.com, with these additional benefits:</div>
@@ -1058,6 +1057,7 @@
         </div> <!--Info-->
         </div> <!--Mini profile-->
       </div> <!--Sidebar-->
+
     <script src="./main.js"></script>
     <script src="./game.js"></script>
   </body>
