@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles.css">
     
   </head>
-  <body class="bg-border_color w-screen h-screen relative">
+  <body class="bg-border_color w-screen h-screen relative overflow-y-auto overflow-x-hidden">
   <div class="h-[70%] w-full bg-background_all bg-no-repeat bg-cover lg:text-110">
     </div> <!--image-->
     <div class="absolute top-0 w-full h-full">
