@@ -65,6 +65,7 @@ const typingGame = {
     this.textAreaElement.autoComplete = "off";
     this.textAreaElement.autoCorrect = "off";
     this.textAreaElement.spellcheck = false;
+    
     this.quoteElementDisplay.style.userSelect = "none";
     this.words = this.getRandQuote().split;
     this.countElementBox = document.getElementsByClassName("count-element-box")[0];
@@ -234,6 +235,9 @@ const typingGame = {
   accuracy: function () {
     
   },
+  removeSomeHighlight: function (){
+    document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
+  },
   checkInput(){
     if (this.finishedTyping != true) {
       // Check the textarea value if empty then clear all highlight
@@ -389,6 +393,9 @@ const typingGame = {
 
     // Progress percentage terminate
     this.progressPercentageReset();
+
+    // Remove some highlights
+    this.removeSomeHighlight();
 
     // Input terminate
     this.textAreaElement.removeEventListener("input", this.checkInputBind);
