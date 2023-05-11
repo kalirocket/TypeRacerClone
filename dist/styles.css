@@ -1170,6 +1170,10 @@ hr{
   overflow: auto;
 }
 
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
 .overflow-x-hidden{
   overflow-x: hidden;
 }
@@ -1212,6 +1216,10 @@ hr{
 
 .border-5{
   border-width: 5px;
+}
+
+.border-\[3px\]{
+  border-width: 3px;
 }
 
 .border-b-2{

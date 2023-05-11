@@ -229,7 +229,7 @@ const typingGame = {
     this.wpmElement.textContent = `${Math.floor((this.characters / 5) / (this.wpmTime / 60))} wpm`; 
     
   },
-  raceStatus: function () {
+  accuracy: function () {
     
   },
   checkInput(){
