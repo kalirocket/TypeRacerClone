@@ -85,7 +85,7 @@
           <div id="quote-element-display" class="tracking-widest opacity-100"></div> <!--quote-->
           <div class="text-custom_blue_text flex justify-end text-sm">change display format</div> <!--Display format-->
           <div class="w-full text-area-wrapper select-none">
-            <textarea  class="resize-none w-full h-8 border tracking-widest text-area"  name="" id="text-area-element" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>
+            <textarea  class="resize-none w-full h-8 border tracking-widest text-area text-[11px] md:text-base"  name="" id="text-area-element" cols="" rows="" placeholder="Type the above text here when the race begins"></textarea>
           </div> <!--Text Box-->
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>

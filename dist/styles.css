@@ -1679,6 +1679,27 @@ hr{
   line-height: 1.75rem;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-\[8px\]{
+  font-size: 8px;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
+}
+
+.text-\[12px\]{
+  font-size: 12px;
+}
+
+.text-\[11px\]{
+  font-size: 11px;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -1749,6 +1770,14 @@ hr{
 .text-red-600{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-\[\]{
+  color: ;
+}
+
+.text-\[8\]{
+  color: 8;
 }
 
 .underline{
@@ -1902,6 +1931,11 @@ hr{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 647px){
@@ -1950,6 +1984,11 @@ hr{
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
