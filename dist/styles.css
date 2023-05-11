@@ -911,6 +911,18 @@ hr{
   height: 300px;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[70\%\]{
+  height: 70%;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -1170,8 +1182,8 @@ hr{
   overflow: auto;
 }
 
-.overflow-y-auto{
-  overflow-y: auto;
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .overflow-x-hidden{

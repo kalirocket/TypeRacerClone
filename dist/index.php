@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./styles.css">
     
   </head>
-  <body class="bg-border_color w-screen relative overflow-y-auto overflow-x-hidden">
-    <div class="h-70 bg-background_all bg-no-repeat bg-cover lg:text-110 w-full">
+  <body class="bg-border_color w-screen h-screen relative overflow-x-hidden overflow-y-scroll">
+    <div class="h-[70%] bg-background_all bg-no-repeat bg-cover lg:text-110 w-full absolute top-0 overflow-hidden">
     </div> <!--image-->
-    <div class="absolute top-0 w-full overflow-y-scroll overflow-x-hidden">
+    <div class="w-full h-full overflow-y-scroll overflow-x-hidden absolute top-0">
       <div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
         <div class="flex flex-row justify-between items-center w-header">
           <div class="flex flex-row items-center lg:gap-x-8 lg:-ml-7">
@@ -64,7 +64,7 @@
       </div>
       <!--Header with sidebar-->
     <div class="container max-w-max mx-auto">
-      <div class="invisible absolute bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
+      <div class="absolute invisible bg-white p-4 mx-2 mt-4 rounded-lg" id="show-for-game">
         <div class="flex flex-row justify-between">
           <div class="text-custom_blue_text font-bold text-sm sm:text-lg" id="race-status-element">The race is about to start!</div> <!--Race is about to start-->
           <div id="bid-timer" class="font-semibold"></div>
@@ -1018,7 +1018,9 @@
       </div> <!--Theme Change-->
         <div class="-mt-2"><img src="./assets/addicting_games.png" alt="" width="100px"></div> <!--Addicting games link--></div> <!--Change theme and additing games pic-->
       </div> <!--Footer-->
-      <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle-hide-show">
+    </div> 
+    <!--All items wrapper-->
+    <div class="invisible bg-custom_blue_bg_2 w-sidebar fixed top-0 right-0 h-full shadow-xl shadow-black  flex flex-col justify-start px-8 gap-y-6" id="toggle-hide-show">
         <button class="mt-4 -mr-3 flex justify-end items-end "><img src="./assets/close.png" alt="" width="20px" onclick="hideSideBar()"></button> <!--Close Button-->
         <div class="flex flex-col gap-1">
           <div class="text-custom_white"><a href="./pitstop.php">Pit Stop</a></div>
@@ -1056,9 +1058,6 @@
         </div> <!--Info-->
         </div> <!--Mini profile-->
       </div> <!--Sidebar-->
-    </div> 
-    <!--All items wrapper-->
-
     <script src="./main.js"></script>
     <script src="./game.js"></script>
   </body>

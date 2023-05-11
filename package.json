@@ -7,5 +7,9 @@
     "watch": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch"
   },
   "author": "Siaw Henry Nartey",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8"
+  }
 }
