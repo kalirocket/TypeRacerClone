@@ -12,6 +12,7 @@ const typingGame = {
   wpmElement: document.getElementById("wpm-element"),
   raceTextElement: document.getElementById("race-status-element"),
   quoteTextArea: document.getElementsByClassName("quoteTextArea")[0],
+  raceAgainElement: document.getElementsByClassName("race-again-element")[0],
 
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
@@ -86,6 +87,9 @@ const typingGame = {
     this.characters = 0;
 
     this.position = "1st";
+    
+    this.raceAgainElement.classList.remove("not-sr-only");
+    this.raceAgainElement.classList.add("sr-only");
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
@@ -264,6 +268,8 @@ const typingGame = {
     this.quoteTextArea.classList.remove("not-sr-only");
     this.quoteTextArea.classList.add("sr-only");
     this.bidCounter = 10;
+    this.raceAgainElement.classList.remove("sr-only");
+    this.raceAgainElement.classList.add("not-sr-only");
   },
   summaryPageClear: function () {
     this.quoteTextArea.classList.remove("sr-only");

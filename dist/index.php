@@ -92,7 +92,7 @@
         <!--Text to be typed and others-->
       <div class="flex flex-col sm:flex-row sm:justify-between mt-6 mb-4 gap-y-2">
       <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 w-full sm:w-testing sm:py-4" onclick="quitGame()">Main menu (leave race)</button> <!--Leave Race-->
-      <button class="bg-custom_green flex justify-center items-center text-custom_white rounded-md py-2 w-full sm:w-[150px] sm:py-4" onclick="raceAgain()">Race again</button>
+      <button class="bg-custom_green flex justify-center items-center text-custom_white rounded-md py-2 w-full sm:w-[150px] sm:py-4 race-again-element" onclick="raceAgain()">Race again</button>
       </div>
         <div class = "absolute top-12 right-0 flex flex-row w-4/5 sm:w-1/2 h-20 count-element-box">
           <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-400 h-full justify-evenly items-center">
