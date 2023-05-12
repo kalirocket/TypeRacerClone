@@ -586,3 +586,9 @@ function enterGame() {
 function quitGame() {
   typingGame.quitGame();
 }
+
+function raceAgain() {
+  typingGame.quitGame();
+  typingGame.startGame();
+}
+
