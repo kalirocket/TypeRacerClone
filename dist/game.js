@@ -172,7 +172,7 @@ const typingGame = {
   },
   bidTimerStart: function () {
     // 3 minutes equiv to 180 seconds
-    let counter = 180;
+    this.bidCounter = 180;
     let x = 0;
     let y = 0;
 
@@ -188,13 +188,13 @@ const typingGame = {
         this.wordPerMinute();
       }
       // Check how many minutes
-      if (counter >= 60){
-        x = Math.floor(counter / 60);
-        y = counter % 60;
+      if (this.bidCounter >= 60){
+        x = Math.floor(this.bidCounter / 60);
+        y = this.bidCounter % 60;
       }
       else{
         x = "";
-        y = counter;
+        y = this.bidCounter;
       }
 
       // Add preceding zeros to single digits
@@ -203,12 +203,23 @@ const typingGame = {
       }
 
       // Clear interval
-      if (counter == 0){
-        clearInterval(this.bidTime);
+      if (this.bidCounter == 0){
+
         this.summaryPage();
+        
+        // The race ended
+        this.raceTextElement.textContent = "The race ended";
+        
+        // Clear the x and y timer
+        this.bidTimerElement.textContent = "";
+
+        clearInterval(this.bidTime);
       }
-      this.bidTimerElement.textContent = `${x}:${y}`;
-      --counter; 
+      else if (this.bidCounter != 0){
+        this.bidTimerElement.textContent = `${x}:${y}`;
+      }
+      --this.bidCounter;
+       
     }, 1000);
   },
   bidTimerStop: function () {
@@ -240,9 +251,8 @@ const typingGame = {
     this.wpmElement.textContent = `${Math.floor((this.characters / 5) / (this.wpmTime / 60))} wpm`; 
     
   },
-  accuracy: function () {
-    
-  },
+  accuracy: function () {},
+
   removeSomeHighlight: function (){
     document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
   },
@@ -253,6 +263,7 @@ const typingGame = {
   summaryPage: function () {
     this.quoteTextArea.classList.remove("not-sr-only");
     this.quoteTextArea.classList.add("sr-only");
+    this.bidCounter = 10;
   },
   summaryPageClear: function () {
     this.quoteTextArea.classList.remove("sr-only");
