@@ -1,2 +1,2 @@
 Demo at https://typeracer-replica.herokuapp.com/
-Testing only
+10% of the website done
