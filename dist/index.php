@@ -81,7 +81,7 @@
           </div> <!--Race track and car-->
           <div id="wpm-element" class="font-black text-size_8 sm:text-base">0 wpm</div> <!--WPM-->
         </div> <!--user-->
-        <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2">
+        <div class="px-4 bg-cyan-50 border rounded-lg font-inner_text py-6 mt-2 flex flex-col gap-y-2 not-sr-only quoteTextArea">
           <div id="quote-element-display" class="tracking-widest opacity-100"></div> <!--quote-->
           <div class="text-custom_blue_text flex justify-end text-sm">change display format</div> <!--Display format-->
           <div class="w-full text-area-wrapper select-none">
@@ -90,7 +90,10 @@
           <div class="flex justify-end"><img src="./assets/help.png" alt="" width="12px"></div> <!--Help-->
       </div>
         <!--Text to be typed and others-->
-      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 mt-6 mb-4 w-full sm:w-testing" id="quit-game" onclick="quitGame()">Main menu (leave race)</button> <!--Leave Race-->
+      <div class="flex flex-col sm:flex-row sm:justify-between mt-6 mb-4 gap-y-2">
+      <button class="bg-orange-400 flex justify-center items-center text-custom_white rounded-md py-2 w-full sm:w-testing sm:py-4" id="quit-game" onclick="quitGame()">Main menu (leave race)</button> <!--Leave Race-->
+      <button class="bg-custom_green flex justify-center items-center text-custom_white rounded-md py-2 w-full sm:w-[150px] sm:py-4">Race again</button>
+      </div>
         <div class = "absolute top-12 right-0 flex flex-row w-4/5 sm:w-1/2 h-20 count-element-box">
           <div class="w-1/3 flex flex-row border-5 border-black bg-gradient-to-r from-slate-500 to-slate-400 h-full justify-evenly items-center">
             <div class="bg-red-500 rounded-full h-8 w-8 md:h-10 md:w-10 border-[3px] border-black redCircle"></div> <!--Circle 1 -->

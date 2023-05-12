@@ -11,6 +11,8 @@ const typingGame = {
   fullWidthClass: document.getElementsByClassName("fullwidth")[0],
   wpmElement: document.getElementById("wpm-element"),
   raceTextElement: document.getElementById("race-status-element"),
+  quoteTextArea: document.getElementsByClassName("quoteTextArea")[0],
+
   getRandQuote: function () {
     let len = Object.keys(this.quotes).length;
     let decimal = Math.random() * len;
@@ -82,6 +84,8 @@ const typingGame = {
 
     this.wpmTime = 0;
     this.characters = 0;
+
+    this.position = "1st";
   },
   textAreaEleInit: function () {
     this.textAreaElement.value = "";
@@ -179,7 +183,10 @@ const typingGame = {
     this.bidTime = setInterval(() => {
 
       // Wpm time update
-      this.wordPerMinute();
+      
+      if (!this.finishedTyping){
+        this.wordPerMinute();
+      }
       // Check how many minutes
       if (counter >= 60){
         x = Math.floor(counter / 60);
@@ -198,6 +205,7 @@ const typingGame = {
       // Clear interval
       if (counter == 0){
         clearInterval(this.bidTime);
+        this.summaryPage();
       }
       this.bidTimerElement.textContent = `${x}:${y}`;
       --counter; 
@@ -237,6 +245,18 @@ const typingGame = {
   },
   removeSomeHighlight: function (){
     document.getElementsByClassName("text-area")[0].classList.remove("bg-red-600");
+  },
+  positionUser: function () {
+    let post = "1st";
+    this.raceTextElement.textContent = `You finished ${post}.`
+  },
+  summaryPage: function () {
+    this.quoteTextArea.classList.remove("not-sr-only");
+    this.quoteTextArea.classList.add("sr-only");
+  },
+  summaryPageClear: function () {
+    this.quoteTextArea.classList.remove("sr-only");
+    this.quoteTextArea.classList.add("not-sr-only");
   },
   checkInput(){
     if (this.finishedTyping != true) {
@@ -323,9 +343,10 @@ const typingGame = {
             }
             document.getElementsByClassName(`w${this.currentWordIndex}`)[0].classList.remove("underline");
             if (this.currentWordIndex == this.words.length - 1) {
-              this.progressPercentage()
+              this.progressPercentage();
               this.finishedTyping = true;
-              this.bidTimerStop();
+              this.summaryPage();
+              this.positionUser();
             } else {
               this.progressPercentage();
               this.getNextUnderlineWord();
@@ -396,6 +417,9 @@ const typingGame = {
 
     // Remove some highlights
     this.removeSomeHighlight();
+
+    // Clear the summary page
+    this.summaryPageClear();
 
     // Input terminate
     this.textAreaElement.removeEventListener("input", this.checkInputBind);

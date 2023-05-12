@@ -875,16 +875,16 @@ hr{
   height: 435px;
 }
 
+.h-70{
+  height: 70vh;
+}
+
 .h-8{
   height: 2rem;
 }
 
 .h-85{
   height: 85px;
-}
-
-.h-\[70\%\]{
-  height: 70%;
 }
 
 .h-change_theme_button{
@@ -909,14 +909,6 @@ hr{
 
 .h-profilemini{
   height: 300px;
-}
-
-.h-screen{
-  height: 100vh;
-}
-
-.h-70{
-  height: 70vh;
 }
 
 .w-1\/2{
@@ -1001,10 +993,6 @@ hr{
 
 .w-sidebar{
   width: 300px;
-}
-
-.w-screen{
-  width: 100vw;
 }
 
 .max-w-max{
@@ -1895,6 +1883,23 @@ hr{
 
   .sm\:w-testing{
     width: 230px;
+  }
+
+  .sm\:w-\[150px\]{
+    width: 150px;
+  }
+
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
+  }
+
+  .sm\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:text-base{
