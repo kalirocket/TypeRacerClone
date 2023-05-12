@@ -1881,12 +1881,12 @@ hr{
     width: 75px;
   }
 
-  .sm\:w-testing{
-    width: 230px;
-  }
-
   .sm\:w-\[150px\]{
     width: 150px;
+  }
+
+  .sm\:w-testing{
+    width: 230px;
   }
 
   .sm\:flex-row{
