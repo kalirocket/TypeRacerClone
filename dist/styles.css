@@ -915,6 +915,10 @@ hr{
   height: 100vh;
 }
 
+.h-70{
+  height: 70vh;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -995,12 +999,12 @@ hr{
   width: 40px;
 }
 
-.w-screen{
-  width: 100vw;
-}
-
 .w-sidebar{
   width: 300px;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .max-w-max{
@@ -1174,20 +1178,12 @@ hr{
   overflow: auto;
 }
 
-.overflow-hidden{
-  overflow: hidden;
-}
-
 .overflow-y-auto{
   overflow-y: auto;
 }
 
 .overflow-x-hidden{
   overflow-x: hidden;
-}
-
-.overflow-y-scroll{
-  overflow-y: scroll;
 }
 
 .rounded{
@@ -1632,6 +1628,10 @@ hr{
   line-height: 2.25rem;
 }
 
+.text-\[11px\]{
+  font-size: 11px;
+}
+
 .text-change_f_size{
   font-size: 150%;
 }
@@ -1681,27 +1681,6 @@ hr{
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-\[8px\]{
-  font-size: 8px;
-}
-
-.text-\[10px\]{
-  font-size: 10px;
-}
-
-.text-\[12px\]{
-  font-size: 12px;
-}
-
-.text-\[11px\]{
-  font-size: 11px;
 }
 
 .font-black{
@@ -1774,14 +1753,6 @@ hr{
 .text-red-600{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.text-\[\]{
-  color: ;
-}
-
-.text-\[8\]{
-  color: 8;
 }
 
 .underline{
@@ -1935,11 +1906,6 @@ hr{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 647px){
@@ -1985,14 +1951,14 @@ hr{
     line-height: 2rem;
   }
 
-  .md\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

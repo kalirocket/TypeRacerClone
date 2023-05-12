@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./styles.css">
     
   </head>
-  <body class="bg-border_color w-screen h-screen relative overflow-y-auto overflow-x-hidden">
-  <div class="h-[70%] w-full bg-background_all bg-no-repeat bg-cover lg:text-110">
+  <body class="bg-border_color w-full h-full relative overflow-y-auto overflow-x-hidden">
+  <div class="h-70 w-full bg-background_all bg-no-repeat bg-cover lg:text-110">
     </div> <!--image-->
     <div class="absolute top-0 w-full h-full">
       <div class="bg-custom_blue_bg_1 flex justify-center h-height_1 xl:px-100">
